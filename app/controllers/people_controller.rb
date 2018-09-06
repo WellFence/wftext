@@ -53,12 +53,6 @@ class PeopleController < ApplicationController
     end
   end
 
-  private
-
-  def person_params
-    params.require(:person).permit(:first_name, :last_name, :company, :position, :email, :phone, :h2s, :has_card, :card_number, :rig, :id)
-  end
-
   def notify_wellfence
     account_sid = ENV['ACCOUNT_SID']
     auth_token = ENV['AUTH_TOKEN']
@@ -70,5 +64,12 @@ class PeopleController < ApplicationController
         to: ["+12104008165", "+18322820867"],
       body: "#{@person.first_name} #{@person.last_name} \n #{@person.company} \n #{@person.position} \n #{@person.email} \n Phone: #{@person.phone} \n H2S: #{@person.h2s} \n ID:#{@person.card_number}")
   end
+  
+  private
+
+  def person_params
+    params.require(:person).permit(:first_name, :last_name, :company, :position, :email, :phone, :h2s, :has_card, :card_number, :rig, :id)
+  end
+
 
 end

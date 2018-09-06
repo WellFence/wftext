@@ -9,7 +9,7 @@ class PeopleController < ApplicationController
   end
 
   def new
-    @people = Person.new
+    @person = Person.new
   end
 
   def create

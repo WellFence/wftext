@@ -1,0 +1,60 @@
+<div class="row tcent lmarneg35 tmar25 bmar15">
+  <%= image_tag("wflogo.PNG", class: "wid200") %>
+  <p class="lmar50 lpad5 tmarneg22 font1font1pointfive">Credentialed Wellsite Access</p>
+</div>
+<div class="container tcent">
+  <div class="row tcent">
+    <div class="col-md-6 bmar50 tcent">
+      <%= form_for [@person] do |f| %>
+        <% if @person.errors.any? %>
+          <div class="alert alert-danger">
+            <h4><%= pluralize(@person.errors.count, "error") %></h4>
+            <ul>
+              <% @person.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+          <%= f.label :first_name, class: "pull-left" %><br>
+          <%= f.text_field :first_name, class: 'form-control', placeholder: "" %><br>
+
+          <%= f.label :last_name, class: "pull-left" %><br>
+          <%= f.text_field :last_name, class: 'form-control', placeholder: "" %><br>
+
+          <%= f.label :Company, class: "pull-left" %><br>
+          <%= f.text_field :company, class: 'form-control', placeholder: "" %><br>
+
+          <%= f.label :position, class: "pull-left" %><br>
+          <%= f.text_field :position, class: 'form-control', placeholder: "" %><br>
+
+          <%= f.label :email, class: "pull-left" %><br>
+          <%= f.text_field :email, class: 'form-control', placeholder: "" %><br>
+
+          <%= f.label :phone_number, class: "pull-left" %><br>
+          <%= f.text_field :phone, class: 'form-control', placeholder: "8001234567" %><br>
+
+          <%= f.label :H2S_Expiration_Date, class: "pull-left" %><br>
+          <%= f.text_field :h2s, class: 'form-control', placeholder: "" %><br>
+
+          <%= f.label :Do_you_have_a_WellFence_card?, class: "pull-left" %><br>
+          <%= f.check_box :has_card, class: 'form-control font3rem dispin', placeholder: "" %><br>
+
+          <%= f.label :WellFence_card_number, class: "pull-left" %><br><br>
+          <%= f.text_field :card_number, class: 'form-control', placeholder: "" %><br>
+
+          <%= f.label :rig, class: "pull-left" %><br>
+          <%= f.text_field :rig, class: 'form-control', placeholder: "" %><br>
+
+          <%= f.submit "Submit", class: 'btn btn-primary font5rem' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="tcent fullwid">
+  <%= link_to "", welcome_index_path, class: "glyphicon grayfont glyphicon-home eefont nodec2 font3rem bpad25" %>
+</div>
+<div class="grayfont tcent bmar50 row lmar25 rmar25">
+  <small class="tcent wid75per grayfont wid75per bmar25 lmar25 rmar25"> © 2017-2018 WellFence LLC. All Rights Reserved.Patented & Patent Pending. Wellfence ® is a registered trademark of Wellfence LLC.<br> Support: 832.940.9797</small>
+</div>

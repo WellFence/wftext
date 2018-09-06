@@ -1,0 +1,32 @@
+<div class="container bwid on-left">
+    <div class="col-md-8">
+      <div class="media">
+          <div class="container on-left lmar tpad">
+
+            <div class="container on-left ewid">
+              <h1 class="ifont fullwid">People</h1>
+              <div class="on-bottom"></div>
+              <div class="container">
+                <div class="bgwh">
+                  <% @people.each do |person| %>
+                    <h4 class="lmar2">
+                      <%= link_to "", person_path, class: "glyphicon glyphicon-record" %>
+                      <%= person.first_name %> <%= person.first_name %><br>
+                      <%= person.company %> | <%= person.position %><br>
+                      <%= person.card_number %> | <%= person.h2s %><br><br>
+                      <%= link_to "Edit", edit_person_path(person), class: "lefttab smallfont" %>
+                      <%= link_to "Delete", person_path, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this post?'} %>
+                    </h4>
+                    <small class="lmar2">Added on:<%= person.created_at %></small>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="bmar"><br></div>
+      </div>
+    </div>
+</div>

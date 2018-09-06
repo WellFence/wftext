@@ -1,0 +1,2787 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ .mailchimpformborder {
+   border: 1px solid gray;
+ }
+
+ .bannerwid {
+   width: 728px;
+ }
+
+ .circleshape {
+   border-radius: 50%;
+ }
+
+ .me {
+   width: 400px;
+   margin: 90px auto;
+ }
+ .me p,
+ .me h1 {
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   text-align: center;
+ }
+ .me p {
+   font-weight: 200;
+ }
+ .me span {
+   font-weight: bold;
+ }
+ .social {
+   position: absolute;
+   display: inline-block;
+   width: 100px;
+ }
+ .social ul {
+   padding: 0px;
+   -webkit-transform: translate(-270px, 0);
+   -moz-transform: translate(-270px, 0);
+   -ms-transform: translate(-270px, 0);
+   -o-transform: translate(-270px, 0);
+   transform: translate(-270px, 0);
+ }
+ .social ul li {
+   display: block;
+   margin: 5px;
+   background: rgba(0, 0, 0, 0.36);
+   width: 200px;
+   text-align: right;
+   padding: 10px;
+   -webkit-border-radius: 0 30px 30px 0;
+   -moz-border-radius: 0 30px 30px 0;
+   border-radius: 0 30px 30px 0;
+   -webkit-transition: all 1s;
+   -moz-transition: all 1s;
+   -ms-transition: all 1s;
+   -o-transition: all 1s;
+   transition: all 1s;
+ }
+ .social ul li:hover {
+   -webkit-transform: translate(110px, 0);
+   -moz-transform: translate(110px, 0);
+   -ms-transform: translate(110px, 0);
+   -o-transform: translate(110px, 0);
+   transform: translate(110px, 0);
+   background: rgba(255, 255, 255, 0.4);
+ }
+ .social ul li:hover a {
+   color: #000;
+ }
+ .social ul li:hover i {
+   color: #fff;
+   background: #000;
+   -webkit-transform: rotate(360deg);
+   -moz-transform: rotate(360deg);
+   -ms-transform: rotate(360deg);
+   -o-transform: rotate(360deg);
+   transform: rotate(360deg);
+   -webkit-transition: all 1s;
+   -moz-transition: all 1s;
+   -ms-transition: all 1s;
+   -o-transition: all 1s;
+   transition: all 1s;
+ }
+ .social ul li i {
+   margin-left: 10px;
+   color: #000;
+   background: #fff;
+   opacity: 0.9;
+   padding: 10px;
+   padding-right: 27px;
+   padding-bottom: 27px;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   border-radius: 50%;
+   width: 20px;
+   height: 20px;
+   font-size: 20px;
+   background: #ffffff;
+   -webkit-transform: rotate(0deg);
+   -moz-transform: rotate(0deg);
+   -ms-transform: rotate(0deg);
+   -o-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+
+
+
+ #fb1:hover {
+   #fb {
+   background: #0059b3;
+   }
+ }
+
+ #in1:hover {
+   #in {
+   background: #ff3399;
+   }
+ }
+
+ #yt1:hover {
+   #yt {
+   background: red;
+   }
+ }
+
+ .alertbanner {
+   background-color: #333;
+   color: white;
+   opacity: .9;
+ }
+
+ .mapground {
+   background-color: #333;
+ }
+
+ body.modal-open .mm-slideout {
+     position: relative;
+     z-index: auto;
+ }
+
+ .z1000 {
+   z-index: 1000!important;
+ }
+
+ .z2000 {
+   z-index: 2000!important;
+ }
+
+ .zinherit1000 {
+   z-index: inherit 1;
+ }
+
+ .layer1 {
+   background-color: lightgray;
+   min-height: 1000px;
+   width: 100%;
+ }
+
+ .layer2 {
+   background-color: white;
+   opacity: .95;
+   margin-top: 25px;
+   margin-left: 20%;
+   margin-right: 20%;
+   margin-bottom: 20%;
+   min-height: 400px;
+   min-width: 100px;
+   width: 60%;
+   height: auto;
+   position: absolute;
+   text-align: center;
+   padding: 25px;
+ }
+
+ .layer3 {
+   background-color: MidnightBlue;
+ }
+
+ .headline {
+   border-bottom: 1px solid black;
+   min-width: 50px;
+ }
+
+ .headlineb {
+   border-top: 1px solid black;
+   min-width: 50px;
+   height: 40%;
+ }
+
+ .afont {
+   font-family: 'Coming Soon', cursive;
+   color: black;
+ }
+
+ .aafont {
+   font-family: 'Coming Soon', cursive;
+   color: white;
+ }
+
+ #my-menu:not(.mm-menu) {
+   display: none;
+ }
+
+ .bfont {
+   color: DimGray;
+   background-color: white;
+   font-size: 4rem;
+   border: none;
+ }
+
+ .bfont:hover {
+   text-shadow: 2px 2px lightgray;
+   border: none;
+ }
+
+ .bbfont {
+   color: DimGray;
+   background-color: white;
+   font-size: 3rem;
+   border: none;
+ }
+
+ .bbfont:hover {
+   text-shadow: 2px 2px lightgray;
+   border: none;
+ }
+
+ .bbbfont {
+   color: DimGray;
+   font-size: 3rem;
+   border: none;
+   text-decoration: none!important;
+ }
+
+ .bbbbfont:hover {
+   text-shadow: 2px 2px darkgray;
+   border: none;
+   text-decoration: none!important;
+   color: dimgray;
+   background-color: none;
+ }
+
+ .bbbbfont {
+   color: DimGray;
+   background-color: white;
+   font-size: 3rem;
+   border: none;
+ }
+
+ .bbfont:hover {
+   text-shadow: 2px 2px lightgray;
+   border: none;
+ }
+
+
+ .cfont {
+   font-family: 'Coming Soon', cursive;
+   color: black;
+   text-decoration: none;
+ }
+
+ .cfont:hover {
+   text-decoration: none;
+   background-color: white;
+ }
+
+ .ccfont {
+   color: DimGray;
+   font-size: 3rem;
+   border: none;
+   background-color: none;
+ }
+
+ .ccfont:hover {
+   text-shadow: 2px 2px lightgray;
+   color: gray;
+   border: none;
+   background-color: none;
+   text-decoration: none;
+ }
+
+ .cccfont {
+   color: DimGray;
+   border: none;
+   background-color: none;
+ }
+
+ .cccfont:hover {
+   text-shadow: 0px 1px lightgray;
+   color: gray;
+   border: none;
+   background-color: none;
+   text-decoration: none;
+ }
+
+ .dfont {
+   color: #FFF;
+   text-decoration: none;
+   font-family: 'Coming Soon', cursive;
+ }
+
+ .efont {
+   color: black;
+   font-family: 'Amatic SC', sans-serif;
+   text-decoration: none;
+ }
+
+ input#user_legal {
+   text-align: center;
+   position: relative;
+ }
+
+ .legalback {
+   color: gray;
+   width: 65px;
+   height: 50px;
+   opacity: .8;
+   background-color: white;
+   color: darkgray;
+   margin-top: 0px;
+   padding-top: 10px;
+   padding-bottom: 5px;
+   position: fixed;
+   font-size: 18pt;
+   text-align: center;
+   margin-left: 0;
+   text-decoration: none;
+   border: 1px solid lightgray;
+   border-bottom-right-radius: 6px;
+   border-top-right-radius: 6px;
+ }
+
+ .legalback:hover {
+   text-decoration: none;
+   color: gray;
+ }
+
+ .legalback2 {
+   width: 80px;
+   height: 60px;
+   opacity: .8;
+   background-color: white;
+   color: darkgray;
+   margin-top: 0px;
+   padding-top: 10px;
+   padding-bottom: 5px;
+   margin-right: 100px;
+   padding-right: 25px;
+   padding-left: 10px;
+   position: fixed;
+   font-size: 18pt;
+   text-align: center;
+   text-decoration: none;
+   border: 1px solid lightgray;
+   border-bottom-left-radius: 6px;
+   border-top-left-radius: 6px;
+ }
+
+ .legalback2:hover {
+   text-decoration: none;
+ }
+
+ .ffont {
+   color: darkgray;
+   font-size: 1.5rem;
+   font-weight: bold;
+ }
+
+ .gfont {
+   color: darkgray;
+   font-size: 3rem;
+   font-weight: bold;
+   background-color: white;
+   text-decoration: none;
+ }
+
+ .gfont:hover {
+   color: #4d4d4d;
+   background-color: white;
+   text-decoration: none;
+   text-shadow: 2px 2px black;
+ }
+
+ .gfont:visited {
+   color: darkgray;
+   background-color: white;
+   text-decoration: none;
+ }
+
+ .hfont {
+   color: darkgray;
+   font-size: 3rem;
+   font-weight: bold;
+   background-color: white;
+   text-decoration: none;
+ }
+
+ .hfont:hover {
+   color: darkgray;
+   background-color: white;
+   text-decoration: none;
+   text-shadow: 1px 1px indianred;
+ }
+
+ .hfont:visited {
+   color: darkgray;
+   background-color: white;
+   text-decoration: none;
+ }
+
+ .jfont {
+   color: gray;
+   font-size: 3rem;
+   font-weight: bold;
+   background-color: white;
+   text-decoration: none;
+ }
+
+ .jfont:hover {
+   color: gray;
+   background-color: white;
+   text-decoration: none;
+   text-shadow: 1px 1px darkseagreen;
+ }
+
+ .jfont:visited {
+   color: gray;
+   background-color: white;
+   text-decoration: none;
+ }
+
+ .kfont {
+   font-family: 'Coming Soon', cursive;
+   color: black;
+   text-decoration: none!important;
+ }
+
+ .kfont:hover {
+   text-decoration: none!important;
+ }
+
+ .lfont {
+   font-family: 'Coming Soon', cursive;
+   color: white;
+   text-decoration: none;
+ }
+
+ .lfont:hover {
+   text-decoration: none;
+ }
+
+ .mfont {
+   font-family: 'Coming Soon', cursive;
+   background-color: none;
+   color: black;
+   text-decoration: none;
+ }
+
+ .mfont:hover {
+   text-decoration: none;
+   color: black;
+   padding: 10px;
+   border: 1px solid black;
+   border-radius: 10px;
+ }
+
+ .nfont {
+   font-family: 'Amatic SC', sans-serif;
+   text-decoration: none;
+   font-weight: normal;
+ }
+
+ .ofont {
+   font-family: 'Raleway', sans-serif;
+   color: black;
+   padding: 25px;
+   text-align: left;
+ }
+
+ .ralefont {
+   font-family: 'Raleway', sans-serif;
+ }
+
+ .ralefont:hover {
+   text-decoration: none;
+ }
+
+ .pfont {
+   font-family: 'Raleway', sans-serif;
+   color: black;
+   padding: 25px;
+ }
+
+ .grayfont {
+   color: gray;
+ }
+
+ .grayfont:hover {
+   color: gray;
+   text-decoration: none;
+ }
+
+ .grayfont:active {
+   color: gray;
+   text-decoration: none;
+ }
+
+ .grayfont:visited {
+   color: gray;
+   text-decoration: none;
+ }
+
+ .greenfont {
+   color: green;
+ }
+
+ .limegreenfont {
+   color: limegreen;
+ }
+
+ .orangefont {
+   color: orange;
+ }
+
+ .bluefont {
+   color: blue;
+ }
+
+ .redfont {
+   color: red;
+ }
+
+ .limefont {
+   color: lime;
+ }
+
+ .pinkfont {
+   color: DeepPink;
+ }
+
+ .purplefont {
+   color: purple;
+ }
+
+ .darkgrayfont {
+   color: darkgray;
+ }
+
+ .font7rem {
+   font-size: 7rem;
+ }
+
+ .font8rem {
+   font-size: 8rem;
+ }
+
+ .font9rem {
+   font-size: 9rem;
+ }
+
+ .font6rem {
+   font-size: 6rem;
+ }
+
+ .pointborder {
+   border-left: 1px solid lightgray;
+   border-right: 1px solid lightgray;
+ }
+
+ .pointbutton3 {
+   color: white;
+   background-color: darkblue;
+   text-decoration: none;
+   padding: 10px;
+   border: 1px solid darkblue;
+   border-radius: 10px;
+ }
+
+ .pointbutton3:hover {
+   color: darkblue;
+   background-color: white;
+   text-decoration: none;
+ }
+
+ .pointsquare3 {
+   color: white;
+   background-color: darkblue;
+   text-decoration: none;
+   padding: 25px;
+   padding-top: 60px;
+   vertical-align: middle;
+   border: 1px solid darkblue;
+   border-radius: 0px;
+   height: 250px;
+   width: 250px;
+ }
+
+ .pointsquare3:hover {
+   color: darkblue;
+   background-color: white;
+   text-decoration: none;
+ }
+
+ .pointbutton2 {
+   color: white;
+   background-color: darkgreen;
+   text-decoration: none;
+   padding: 10px;
+   border: 1px solid white;
+   border-radius: 10px;
+ }
+
+ .pointbutton2:hover {
+   color: darkgreen;
+   background-color: white;
+   text-decoration: none;
+   border: 1px solid white;
+ }
+
+ .pointsquare2 {
+   color: white;
+   background-color: darkgreen;
+   text-decoration: none;
+   padding: 25px;
+   padding-top: 60px;
+   vertical-align: middle;
+   border: 1px solid darkgreen;
+   border-radius: 0px;
+   height: 250px;
+   width: 250px;
+ }
+
+ .pointsquare2:hover {
+   color: darkgreen;
+   background-color: white;
+   text-decoration: none;
+   border: 1px solid darkgreen;
+ }
+
+ .pointsquare6 {
+   color: white;
+   background-color: #aa0003;
+   text-decoration: none;
+   padding: 25px;
+   padding-top: 60px;
+   vertical-align: middle;
+   border: 1px solid #aa0003;
+   border-radius: 0px;
+   height: 250px;
+   width: 250px;
+ }
+
+ .pointsquare6:hover {
+   color: #aa0003;
+   background-color: white;
+   text-decoration: none;
+   border: 1px solid #aa0003;
+ }
+
+ .pointsquare7 {
+   color: white;
+   background-color: darkcyan;
+   text-decoration: none;
+   padding: 25px;
+   padding-top: 60px;
+   vertical-align: middle;
+   border: 1px solid darkcyan;
+   border-radius: 0px;
+   height: 250px;
+   width: 250px;
+ }
+
+ .pointsquare7:hover {
+   color: darkcyan;
+   background-color: white;
+   text-decoration: none;
+   border: 1px solid darkcyan;
+ }
+
+ .pointbutton {
+   color: white;
+   background-color: orange;
+   text-decoration: none;
+   padding: 25px;
+   padding-top: 15px;
+   vertical-align: middle;
+   border: 1px solid orange;
+   border-radius: 10px;
+   height: 150px;
+   width: 250px;
+   font-size: 4rem;
+   margin-top: 25px;
+ }
+
+ .pointbutton:hover {
+   color: orange;
+   text-decoration: none;
+   border: 1px solid orange;
+   background-color: white;
+ }
+
+ .pointbutton10 {
+   color: white;
+   background-color: orange;
+   text-decoration: none;
+   vertical-align: middle;
+   border: 1px solid orange;
+   border-radius: 10px;
+   overflow-wrap: normal;
+ }
+
+ .pointbutton10:hover {
+   color: orange;
+   text-decoration: none;
+   border: 1px solid orange;
+   background-color: white;
+ }
+
+ .pointsquare {
+   color: white;
+   font-weight: bolder;
+   border: 1px solid darkorange;
+   background-color: darkorange;
+   padding: 25px;
+   height: 250px;
+   width: 250px;
+ }
+
+ .pointsquare:hover {
+   color: darkorange;
+   text-decoration: none;
+   background-color: white;
+ }
+
+ .pointsquare10 {
+   color: white;
+   font-weight: bolder;
+   border: 1px solid darkgray;
+   background-color: darkgray;
+   padding: 25px;
+   height: 250px;
+   width: 250px;
+   display: inline-block;
+ }
+
+ .pointsquare10:hover {
+   color: darkgray;
+   text-decoration: none;
+   background-color: white;
+ }
+
+ .pointbutton4 {
+   position: relative;
+   color: white;
+   font-weight: bolder;
+   border: 1px solid white;
+   border-radius: 10px;
+   background-color: midnightblue;
+   font-size: 3rem;
+   padding: 15px;
+   width: 200px;
+   height: auto;
+   white-space: normal;
+ }
+
+ .pointbutton4:hover {
+   color: midnightblue;
+   text-decoration: none;
+   border: 1px solid white;
+   background-color: white;
+   font-size: 3rem;
+ }
+
+ .pointsquare4 {
+   position: relative;
+   color: white;
+   font-weight: bolder;
+   border: 1px solid white;
+   border-radius: 10px;
+   background-color: midnightblue;
+   font-size: 3rem;
+   padding: 15px;
+   width: 200px;
+   height: auto;
+   white-space: normal;
+ }
+
+ .pointsquare4:hover {
+   color: midnightblue;
+   text-decoration: none;
+   border: 1px solid white;
+   background-color: white;
+   font-size: 3rem;
+ }
+
+ .pointsquare5 {
+   color: white;
+   font-weight: bolder;
+   border: 1px solid darkorange;
+   background-color: darkorange;
+   padding: 25px;
+   height: 200px;
+   width: 200px;
+   display: inline-block;
+   text-align: center;
+   position: relative;
+ }
+
+ .pointsquare5:hover {
+   color: darkorange;
+   text-decoration: none;
+   background-color: white;
+ }
+
+ .pointbutton5 {
+   color: white;
+   font-weight: bolder;
+   border: 1px solid white;
+   border-radius: 10px;
+   background-color: darkgreen;
+   font-size: 3rem;
+   padding: 15px;
+   width: 200px;
+   white-space: normal;
+ }
+
+ .pointbutton5:hover {
+   color: darkgreen;
+   text-decoration: none;
+   border: 1px solid white;
+   background-color: white;
+   font-size: 3rem;
+ }
+
+ .pointbutton6 {
+   color: white;
+   font-weight: bolder;
+   border: 1px solid white;
+   border-radius: 10px;
+   background-color: orange;
+   font-size: 3rem;
+   padding: 15px;
+   width: 200px;
+ }
+
+ .pointbutton6:hover {
+   color: orange;
+   text-decoration: none;
+   border: 1px solid white;
+   background-color: white;
+   font-size: 3rem;
+ }
+
+ .pointbutton7 {
+   color: white;
+   font-weight: bolder;
+   border: 1px solid white;
+   border-radius: 10px;
+   background-color: darkgray;
+   font-size: 3rem;
+   padding: 15px;
+   width: 200px;
+ }
+
+ .pointbutton7:hover {
+   color: darkgray;
+   text-decoration: none;
+   border: 1px solid white;
+   background-color: white;
+   font-size: 3rem;
+ }
+
+ .mtrpoint {
+   width: 250px;
+   height: 250px;
+   background-color: white;
+   border-radius: 0px;
+   display: inline-block;
+   z-index:-20;
+ }
+
+ .darkorangeborder {
+   border: 1px solid darkorange;
+ }
+
+ .orangeborder {
+   border: 1px solid orange;
+ }
+
+ .darkblueborder {
+   border: 1px solid darkblue;
+ }
+
+ .darkgreenborder {
+   border: 1px solid darkgreen;
+ }
+
+ .darkredborder {
+   border: 1px solid darkred;
+ }
+
+ .darkgrayborder {
+   border: 1px solid darkgray;
+ }
+
+ .lightgrayborder {
+   border: 1px solid lightgray;
+ }
+
+ .font1rem {
+   font-size: 1rem;
+ }
+
+ .font1pointfive {
+   font-size: 1.5rem;
+ }
+
+ .nodec {
+   text-decoration: none !important;
+   background-color: white !important;
+   color: black !important;
+ }
+
+ .nodec:hover {
+   text-decoration: none !important;
+   background-color: white !important;
+   color: black !important;
+ }
+
+ .nodec:visited {
+   text-decoration: none !important;
+   background-color: white !important;
+   color: black !important;
+ }
+
+ .nodec2 {
+   background-color: white;
+ }
+
+ .nodec2:hover {
+   text-decoration: none;
+   background-color: white;
+   color: gray;
+ }
+
+ .vidform {
+   border-radius: 10px;
+   border: 1px solid DimGray;
+ }
+
+ .overflowx {
+   overflow-x: hidden;
+ }
+
+ .font1point5rem {
+   font-size: 1.5rem;
+ }
+
+ .font2rem {
+   font-size: 2rem;
+ }
+
+ .font2point5rem {
+   font-size: 2.5rem;
+ }
+
+ .font3rem {
+   font-size: 3rem;
+ }
+
+ .font4rem {
+   font-size: 4rem;
+ }
+
+ .font5rem {
+   font-size: 5rem;
+ }
+
+ .imgsz {
+   max-width: 75px;
+   height: auto;
+ }
+
+ .img-fluid {
+   max-width: 100%;
+   height: auto;
+ }
+
+ .mar10 {
+   margin: 10px;
+ }
+
+ .rmar0 {
+   margin-right: 0px!important;
+ }
+
+ .lmar0 {
+   margin-left: 0px;
+ }
+
+ .rmar1 {
+   margin-right: 1px;
+ }
+
+ .rmarneg45 {
+  margin-right: -45px;
+ }
+
+ .rmar25 {
+  margin-right: 25px;
+ }
+
+ .rmar25 {
+  margin-right: 35px;
+ }
+
+ .rmar50 {
+   margin: 50px;
+ }
+
+ .rmar10 {
+  margin-right: 15px;
+ }
+
+ .rmarneg15 {
+  margin-right: -15px;
+ }
+
+ .tmar5 {
+  margin-top: 5px;
+ }
+
+ .tmar0 {
+   margin-top: 0px;
+ }
+
+ .tmar15 {
+  margin-top: 15px;
+ }
+
+ .tmar10{
+  margin-top: 10px;
+ }
+
+ .tmar25 {
+  margin-top: 25px;
+ }
+
+ .tmar125 {
+
+  margin-top: 125px;
+ }
+
+ .tmar150 {
+  margin-top: 150px;
+ }
+
+ .tmar400 {
+  margin-top: 400px;
+ }
+
+ .tmar50 {
+  margin-top: 50px;
+ }
+
+ .tmar60 {
+  margin-top: 60px;
+ }
+
+ .tmar65 {
+  margin-top: 65px;
+ }
+
+ .tmar40 {
+  margin-top: 40px;
+ }
+
+ .tmar90per {
+  margin-top: 90%;
+  height: 5%;
+  margin-bottom: 5%;
+ }
+
+ .tmar50per {
+  margin-top: 50%;
+ }
+
+ .tmar1000 {
+  margin-top: 1000px;
+ }
+
+ .tmar33per {
+  margin-top: 33%;
+ }
+
+ .tmar45per {
+  margin-top: 45%;
+ }
+
+ .tmar25per {
+  margin-top: 25%;
+ }
+
+ .tmar28per {
+  margin-top: 28%;
+ }
+
+ .tmar30per {
+  margin-top: 30%;
+ }
+
+ .tmar10per {
+  margin-top: 10%;
+ }
+
+ .bmar0 {
+   margin-bottom: 0px;
+ }
+
+ .bmar5 {
+   margin-bottom: 5px;
+ }
+
+ .bmar15 {
+  margin-bottom: 15px;
+ }
+
+ .bmar25 {
+  margin-bottom: 25px;
+ }
+
+ .bmar50 {
+  margin-bottom: 50px;
+ }
+
+ .bmar75 {
+  margin-bottom: 75px;
+ }
+
+ .lmar80per {
+  margin-left: 80%;
+ }
+
+ .lmar90per {
+  margin-left: 90%;
+ }
+
+ .lmar1 {
+  margin-left: 1px;
+ }
+
+ .lmar2 {
+  margin-left: 2px;
+ }
+
+ .lmar15 {
+  margin-left: 15px;
+ }
+
+ .lmar20 {
+  margin-left: 20px;
+ }
+
+ .lmar67em {
+   margin-left: 0.67em;
+ }
+
+ .lmar25 {
+  margin-left: 25px;
+ }
+
+ .lmar30 {
+  margin-left: 30px;
+ }
+
+ .lmar35 {
+  margin-left: 35px;
+ }
+
+ .lmar5per {
+  margin-left: 5%;
+ }
+
+ .lmar7per {
+  margin-left: 7%;
+ }
+
+ .lmar33per {
+  margin-left: 33%;
+ }
+
+ .lmar25per {
+  margin-left: 25%;
+ }
+
+ .lmar11per {
+   margin-left: 11%;
+ }
+
+ .lmar100 {
+  margin-left: 100px;
+ }
+
+ .lmar125 {
+  margin-left: 125px;
+ }
+
+ .lmar150 {
+  margin-left: 150px;
+ }
+
+ .lmar15per {
+  margin-left: 15%;
+ }
+
+ .lmar20per {
+  margin-left: 20%;
+ }
+
+ .lmar25per {
+  margin-left: 25%;
+ }
+
+ .lmar50per {
+  margin-left: 50%;
+ }
+
+ .lmar75per {
+  margin-left: 75%;
+ }
+
+ .lmar85per {
+  margin-left: 85%;
+ }
+
+ .lmarneg10 {
+  margin-left: -10px;
+ }
+
+ .rmar15 {
+  margin-right: 15px;
+ }
+
+ .rmar25 {
+  margin-right: 25px;
+ }
+
+ .rmar50per {
+  margin-right: 50%;
+ }
+
+ .rmar5 {
+  margin-right: 5px;
+ }
+
+ .rmar150 {
+  margin-right: 150px;
+ }
+
+ .lmar10 {
+  margin-left: 10px;
+ }
+
+ .absolutely {
+  position: absolute;
+ }
+
+ .lpad25 {
+  padding-left: 25px;
+ }
+
+ .lpad30 {
+  padding-left: 30px;
+ }
+
+ .lpad50 {
+  padding-left: 50px;
+ }
+
+ .lpad60 {
+  padding-left: 60px;
+ }
+
+ .lpad75 {
+  padding-left: 75px;
+ }
+
+ .lpad0 {
+  padding-left: 0px;
+ }
+
+ .pad5 {
+   padding: 5px;
+ }
+
+ .pad10 {
+   padding: 10px;
+ }
+
+ .pad15 {
+   padding: 15px;
+ }
+
+ .pad25 {
+   padding: 25px;
+ }
+
+ .rpad {
+  padding-right: 10px;
+ }
+
+ .rpad5 {
+  padding-right: 5px;
+ }
+
+ .rpad10 {
+  padding-right: 10px;
+ }
+
+ .rpad50 {
+  padding-right: 50px;
+ }
+
+ .lpad15 {
+  padding-left: 15px;
+ }
+
+ .lpad10 {
+  padding-left: 10px;
+ }
+
+ .lpad3per {
+   padding-left: 3%;
+ }
+
+ .lpad6per {
+   padding-left: 6%;
+ }
+
+ .lpad8per {
+   padding-left: 8%;
+ }
+
+ .rpad0 {
+  padding-right: 0px!important;
+ }
+
+ .rpad25 {
+  padding-right: 25px;
+ }
+
+ .rpad35 {
+  padding-right: 35px;
+ }
+
+ .rpad50 {
+  padding-right: 50px;
+ }
+
+ .rpad50per {
+  padding-right: 50%;
+ }
+
+ .tpad25 {
+  padding-top: 25px;
+ }
+
+ .tpad5 {
+  padding-top: 5px;
+ }
+
+
+ .tpad20 {
+  padding-top: 20px;
+ }
+
+ .tpad50 {
+  padding-top: 50px;
+ }
+
+ .tpad60 {
+  padding-top: 60px;
+ }
+
+ .tpad75 {
+  padding-top: 75px;
+ }
+
+ .bpad2 {
+  padding-bottom: 2px;
+ }
+
+ .bpad20 {
+  padding-bottom: 20px;
+ }
+
+ .bpad25 {
+  padding-bottom: 25px;
+ }
+
+ .bpad50 {
+  padding-bottom: 50px;
+ }
+
+ .pad25 {
+  padding: 25px;
+ }
+
+ .bpad15 {
+   padding-bottom: 15px;
+ }
+
+ .pad50 {
+   padding: 50px;
+ }
+
+ .mar25 {
+  margin: 50px;
+ }
+
+ .bmar10per {
+  margin-bottom: 10%;
+ }
+
+ .tmarneg25 {
+  margin-top: -50px;
+  margin-left: -25px;
+ }
+
+ .tmarneg22 {
+  margin-top: -22px;
+ }
+
+ .tmarneg15 {
+  margin-top: -15px;
+ }
+
+ .tmarneg30 {
+  margin-top: -30px;
+ }
+
+ .tmar {
+  margin-top: 100px;
+ }
+
+ .tmar35 {
+  margin-top: 35px;
+ }
+
+ .tmar45 {
+  margin-top: 45px;
+ }
+
+ .tmar90 {
+  margin-top: 90px;
+ }
+
+ .posfx {
+  position: fixed;
+ }
+
+ .wid50 {
+  width: 50px;
+  position: relative;
+  float: right;
+ }
+
+ .floattop {
+   float: top;
+ }
+
+ .wid75 {
+   width: 75px;
+ }
+
+ .wid100 {
+   width: 100px;
+ }
+
+ .wid150 {
+   width: 150px;
+ }
+
+ .wid200 {
+   width: 200px;
+ }
+
+ .wid250 {
+   width: 250px;
+ }
+
+ .wid300 {
+   width: 300px;
+ }
+
+ .rmar60per {
+    margin-right: 60%
+ }
+
+ .fl {
+  position: relative;
+  float: left;
+ }
+
+ .fr {
+  position: relative;
+  float: right;
+ }
+
+ .abs {
+  position: absolute;
+ }
+
+ .rmar25 {
+  margin-right: 35px;
+ }
+
+ .rmar25per {
+  margin-right: 25%;
+ }
+
+ .rmar10 {
+  margin-right: 15px;
+ }
+
+ .rmar10per {
+  margin-right: 10%;
+ }
+
+ .rmar15per {
+  margin-right: 15%;
+ }
+
+ .rmarneg15 {
+  margin-right: -15px;
+ }
+
+ .tmar15 {
+  margin-top: 15px;
+ }
+
+ .tmar25 {
+  margin-top: 25px;
+ }
+ .tmar125 {
+  margin-top: 125px;
+ }
+ .tmar150 {
+  margin-top: 150px;
+ }
+
+ .tmar75 {
+   margin-top: 75px;
+ }
+
+ .tmar50 {
+  margin-top: 50px;
+ }
+
+ .tmar90per {
+  margin-top: 90%;
+  height: 5%;
+  margin-bottom: 5%;
+ }
+
+ .tmar50per {
+  margin-top: 150px;
+ }
+
+ .tmar33per {
+  margin-top: 33%;
+ }
+
+ .bmar10 {
+  margin-bottom: 10px;
+ }
+
+ .bmar15 {
+  margin-bottom: 15px;
+ }
+
+ .bmar25 {
+  margin-bottom: 25px;
+ }
+
+ .bmar75 {
+  margin-bottom: 75px;
+ }
+
+ .lmar15 {
+  margin-left: 15px;
+ }
+
+ .lmar25 {
+  margin-left: 25px;
+ }
+
+ .lmar33per {
+  margin-left: 33%;
+ }
+
+ .lmar3point3per {
+  margin-left: 3.3%;
+ }
+
+ .lmar100 {
+  margin-left: 100px;
+ }
+
+ .lmar150 {
+  margin-left: 150px;
+ }
+
+ .lmar25per {
+  margin-left: 25%;
+ }
+
+ .lmarneg35 {
+  margin-left: -35px;
+ }
+
+
+ .lmarneg10 {
+  margin-left: -10px;
+ }
+
+ .lmarneg15 {
+  margin-left: -15px;
+ }
+
+ .lmarneg25 {
+  margin-left: -26px;
+ }
+
+ .lmarneg20 {
+  margin-left: -20px;
+ }
+
+ .rmar25 {
+  margin-right: 25px;
+ }
+
+ .lmar10 {
+  margin-left: 10px;
+ }
+
+ .lpad25 {
+  padding-left: 25px;
+ }
+
+ .rpad {
+  padding-right: 10px;
+ }
+
+ .lpad15 {
+  padding-left: 15px;
+ }
+
+ .lpad10 {
+  padding-left: 10px;
+ }
+
+ .lpad5 {
+  padding-left: 5px;
+ }
+
+ .rpad0 {
+  padding-right: 0px;
+ }
+
+ .rpad25 {
+  padding-right: 25px;
+ }
+
+ .tpad25 {
+  padding-top: 25px;
+ }
+
+ .tpad3 {
+   padding-top: 3px;
+ }
+
+ .tpad10 {
+   padding-top: 10px;
+ }
+
+ .tpad100 {
+   padding-top: 100px;
+ }
+
+ .tpad15 {
+   padding-top: 15px;
+ }
+
+ .tpad50 {
+  padding-top: 50px;
+ }
+
+ .tpad75 {
+  padding-top: 75px;
+ }
+
+ .tpad40 {
+   padding-top: 40px;
+ }
+
+ .tpad30 {
+   padding-top: 40px;
+ }
+
+ .bpad25 {
+  padding-bottom: 25px;
+ }
+
+ .pad25 {
+  padding: 25px;
+ }
+
+ .mar25 {
+  margin: 50px;
+ }
+
+ .wid30per {
+  width: 30%;
+ }
+
+ .wid25per {
+   width: 25%;
+ }
+
+ .wid15per {
+   width: 15%;
+ }
+
+ .wid10per {
+   width: 10%;
+ }
+
+ .lmar3per {
+  margin-left: 3%;
+ }
+
+ .lmar75 {
+   margin-left: 75px;
+ }
+
+ .lmar50 {
+   margin-left: 50px;
+ }
+
+ .rmar3per {
+  margin-right: 3%;
+ }
+
+
+ .lmar3per {
+  margin-left: 3%;
+ }
+
+ .bmar10per {
+  margin-bottom: 10%;
+ }
+
+ .tmarneg25 {
+  margin-top: -50px;
+  margin-left: -25px;
+ }
+
+ .tmar {
+  margin-top: 100px;
+ }
+
+ .tmar90 {
+  margin-top: 90px;
+ }
+
+ .tmar75per {
+  margin-top: 75%;
+ }
+
+ .tmar60per {
+  margin-top: 60%;
+ }
+
+ .tmar55per {
+  margin-top: 55%;
+ }
+
+ .tmar80per {
+  margin-top: 80%;
+ }
+
+ .tmar15per {
+  margin-top: 15%;
+ }
+
+ .tmar20per {
+  margin-top: 20%;
+ }
+
+ .tmar45per {
+  margin-top: 45%;
+ }
+
+ .tmar18per {
+  margin-top: 18%;
+ }
+
+ .posfx {
+  position: fixed;
+ }
+
+ .wid50{
+  width: 50px;
+  position: relative;
+  float: right;
+ }
+
+ .wid200 {
+   width: 200px;
+ }
+
+ .ht100 {
+   height: 100px;
+ }
+
+ .ht50 {
+   height: 50px;
+ }
+
+ .ht250 {
+   height: 250px;
+ }
+
+ .ht300 {
+   height: 300px;
+ }
+
+ .ht100per {
+   height: 100%;
+ }
+
+ .ht75per {
+   height: 75%;
+ }
+
+ .ht30per {
+   height: 30%;
+ }
+
+ .ht10 {
+   height: 10px;
+ }
+
+ .ht25 {
+   height: 25px;
+ }
+
+ .ht35 {
+   height: 35px;
+ }
+
+ .ht10rem {
+   height: 10rem;
+ }
+
+ .rmar60per {
+    margin-right: 60%
+ }
+ .fl {
+  position: relative;
+  float: left;
+ }
+ .abs {
+  position: absolute;
+ }
+
+ .posrel {
+   position: relative;
+ }
+
+ .tcent {
+   text-align: center;
+ }
+
+ .twline {
+   border-top: 1px solid white;
+ }
+
+ .bline {
+   border-bottom: 1px solid lightgray;
+ }
+
+ .bline2 {
+   border-bottom: 1px solid black;
+ }
+
+ .bline3 {
+   border-bottom: 1px solid lightgray;
+   width: 80%;
+   margin-left: 10%;
+   text-align: center;
+ }
+
+ .halfline {
+   border-bottom: 1px solid lightgray;
+   width: 50%;
+ }
+
+ .tline {
+   border-top: 1px solid lightgray;
+ }
+
+ .rline {
+   border-right: 1px solid lightgray;
+   padding-right: 75px;
+   height: 100px;
+ }
+
+ .txtalignc {
+   text-align: center;
+ }
+
+ .txtalignl {
+   text-align: left;
+ }
+
+ .txtalignr {
+   text-align: right;
+ }
+
+ .txtalignj {
+   text-align: justify;
+ }
+
+ .wid100per {
+   width: 100%;
+ }
+ .wid120per {
+   width: 120%;
+ }
+
+ .wid90per {
+   width: 90%;
+ }
+
+ .wid50per {
+   width: 50%;
+ }
+
+ .wid55per {
+   width: 55%;
+ }
+
+ .wid5per {
+   width: 5%;
+ }
+
+ .wid10per {
+   width: 10%;
+ }
+
+ .wid40per {
+   width: 40%;
+   margin: 5%;
+ }
+
+ .wid45per {
+   width: 45%;
+   margin: 2.5%;
+ }
+
+ .wid33per {
+   width: 33%;
+   margin: 5%;
+ }
+
+ .wid66per {
+   width: 66%;
+ }
+
+ .wid60per {
+   width: 60%;
+ }
+
+ .wid75per {
+   width: 75%;
+ }
+
+ .wid80per {
+   width: 80%;
+ }
+
+ .lmar10per {
+   margin-left: 10%;
+ }
+
+ .wid85per {
+   width: 85%;
+ }
+
+ .maxwid100 {
+   max-width: 100%;
+   overflow: hidden;
+ }
+
+ .shadow {
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 25px #000000;
+ }
+
+ .shadow2 {
+   -moz-box-shadow:    inset 0 0 10px #D3D3D3;
+   -webkit-box-shadow: inset 0 0 10px #D3D3D3;
+   box-shadow:         inset 0 0 25px #D3D3D3;
+ }
+
+ #pointbutton {
+   -webkit-animation-duration: 3s;
+   -webkit-animation-delay: 7s;
+   -webkit-animation-iteration-count: infinite;
+ }
+
+ .dashedborder {
+   border: 2px dashed white;
+   border-radius: 10px;
+ }
+
+ .whatis {
+   border: 2px dashed white;
+   border-radius: 10px;
+   padding: 15px;
+ }
+
+ .alink {
+   height: 25%;
+   width: 25%;
+   color: red;
+   font-family: 'Coming Soon', cursive;
+   font-weight: bolder;
+   border: 1px solid red;
+   border-radius: 10px;
+   background-color: white;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 25px;
+   font-size: 10rem;
+ }
+
+ .alink:hover {
+   color: red;
+   text-decoration: none;
+   border: 1px solid red;
+   background-color: white;
+ }
+
+ .blink {
+   height: 25%;
+   width: 25%;
+   color: blue;
+   font-family: 'Coming Soon', cursive;
+   font-weight: bolder;
+   border: 1px solid blue;
+   border-radius: 10px;
+   background-color: white;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 25px;
+   font-size: 10rem;
+ }
+
+ .blink:hover {
+   color: blue;
+   text-decoration: none;
+   border: 1px solid blue;
+   background-color: white;
+ }
+
+ .clink {
+   height: 25%;
+   width: 25%;
+   color: green;
+   font-family: 'Coming Soon', cursive;
+   font-weight: bolder;
+   border: 1px solid green;
+   border-radius: 10px;
+   background-color: white;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 25px;
+   font-size: 10rem;
+ }
+
+ .clink:hover {
+   color: green;
+   text-decoration: none;
+   border: 1px solid green;
+   background-color: white;
+ }
+
+ .dlink {
+   height: 25%;
+   width: 25%;
+   color: purple;
+   font-family: 'Coming Soon', cursive;
+   font-weight: bolder;
+   border: 1px solid purple;
+   border-radius: 10px;
+   background-color: white;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 25px;
+   font-size: 10rem;
+ }
+
+ .dlink:hover {
+   color: purple;
+   text-decoration: none;
+   border: 1px solid purple;
+   background-color: white;
+ }
+
+ .elink {
+   height: 25%;
+   width: 25%;
+   color: orange;
+   font-family: 'Coming Soon', cursive;
+   font-weight: bolder;
+   border: 1px solid orange;
+   border-radius: 10px;
+   background-color: white;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 25px;
+   font-size: 10rem;
+ }
+
+ .elink:hover {
+   color: orange;
+   text-decoration: none;
+   border: 1px solid orange;
+   background-color: white;
+ }
+
+ .flink {
+   height: 25%;
+   width: 25%;
+   color: brown;
+   font-family: 'Coming Soon', cursive;
+   font-weight: bolder;
+   border: 1px solid brown;
+   border-radius: 10px;
+   background-color: white;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 25px;
+   font-size: 10rem;
+ }
+
+ .flink:hover {
+   color: brown;
+   text-decoration: none;
+   border: 1px solid brown;
+   background-color: white;
+ }
+
+ .glink {
+   height: 25%;
+   width: 25%;
+   color: pink;
+   font-family: 'Coming Soon', cursive;
+   font-weight: bolder;
+   border: 1px solid pink;
+   border-radius: 10px;
+   background-color: white;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 25px;
+   font-size: 10rem;
+ }
+
+ .glink:hover {
+   color: pink;
+   text-decoration: none;
+   border: 1px solid pink;
+   background-color: white;
+ }
+
+ .hlink {
+   height: 25%;
+   width: 25%;
+   color: DeepSkyBlue;
+   font-family: 'Coming Soon', cursive;
+   font-weight: bolder;
+   border: 1px solid DeepSkyBlue;
+   border-radius: 10px;
+   background-color: white;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 25px;
+   font-size: 10rem;
+ }
+
+ .hlink:hover {
+   color: DeepSkyBlue;
+   text-decoration: none;
+   border: 1px solid DeepSkyBlue;
+   background-color: white;
+ }
+
+ .ilink {
+   height: 25%;
+   width: 25%;
+   color: GreenYellow;
+   font-family: 'Coming Soon', cursive;
+   font-weight: bolder;
+   border: 1px solid GreenYellow;
+   border-radius: 10px;
+   background-color: white;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 25px;
+   font-size: 10rem;
+ }
+
+ .ilink:hover {
+   color: GreenYellow;
+   text-decoration: none;
+   border: 1px solid GreenYellow;
+   background-color: white;
+ }
+
+ .jlink {
+   height: 25%;
+   width: 25%;
+   color: MediumAquaMarine;
+   font-family: 'Coming Soon', cursive;
+   font-weight: bolder;
+   border: 1px solid MediumAquaMarine;
+   border-radius: 10px;
+   background-color: white;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 25px;
+   font-size: 10rem;
+ }
+
+ .jlink:hover {
+   color: MediumAquaMarine;
+   text-decoration: none;
+   border: 1px solid MediumAquaMarine;
+   background-color: white;
+ }
+
+ .whiteground {
+   background-color: white;
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+   text-align: center;
+ }
+
+ .limegreenground {
+   background-color: limegreen;
+ }
+
+ .darkgreenground {
+   background-color: darkgreen;
+ }
+
+ .whiteback {
+   background-color: white;
+   width: 100%;
+   height: 75px;
+ }
+
+ .whiteback2 {
+   background-color: white;
+   width: 100%;
+   height: 25px;
+ }
+
+ .whtgrd {
+   background-color: white;
+   width: auto;
+   height: 100%;
+   min-height: 300px;
+   border-radius: 10px;
+ }
+
+ .whtgrd1 {
+   background-color: white;
+   width: auto;
+   height: 100%;
+   min-height: 200px;
+   border-radius: 10px;
+ }
+
+ .minht300 {
+   min-height: 300px;
+ }
+
+ .orangeground {
+   background-color: darkorange;
+   border-radius: 10px;
+ }
+
+ .orangeground2 {
+   background-color: darkorange;
+ }
+
+ .greenground {
+   background-color: limegreenfont;
+   border-radius: 10px;
+   text-shadow: 1px 2px gray;
+ }
+
+ .whitefont {
+   color: white;
+ }
+
+ .whitefont:hover {
+   color: white;
+   text-decoration: none;
+ }
+
+ .whitefont:active {
+   color: white;
+   text-decoration: none;
+ }
+
+ .whitefont:visited {
+   color: white;
+   text-decoration: none;
+ }
+
+ .whitefont2 {
+   color: white;
+   text-decoration: none;
+ }
+
+ .whitefont2:hover {
+   color: darkorange;
+   text-decoration: none;
+ }
+
+ .blackfont {
+   color: black!important;
+ }
+
+ .darkbluefont {
+   color: darkblue;
+ }
+
+ .darkorangefont {
+   color: darkorange;
+ }
+
+ .darkgreenfont {
+   color: darkgreen;
+ }
+
+ .darkredfont {
+   color: darkred;
+ }
+
+ .midnightbluefont {
+   color: midnightblue;
+ }
+
+ .pointborder3 {
+   border: 1px solid darkorange;
+   border-radius: 10px;
+   width: 40%;
+ }
+
+ .pointborder6 {
+   border: 1px solid darkorange;
+   display: inline-block;
+ }
+
+ .pointborder7 {
+   border: 1px solid gray;
+   max-width: 300px;
+   text-align: center;
+ }
+
+ .pointborder20 {
+   border: 1px solid darkorange;
+   display: inline-block;
+ }
+
+ .pointborder3:active {
+   border: 1px solid darkorange;
+   background-color: darkorange;
+   color: white;
+   border-radius: 10px;
+   width: 40%;
+ }
+
+ .flbottom {
+   float: bottom;
+ }
+
+ .clrbut {
+   opacity: 0;
+ }
+
+ .tiny {
+   width: 5px;
+   height: 5px;
+ }
+
+ .mar0 {
+   margin: 0px;
+ }
+
+ .lmar7 {
+   margin-left: 7px;
+ }
+
+ .bamr0 {
+   margin-bottom: 0px;
+ }
+
+ .tmar0 {
+   margin-top: 0px;
+ }
+
+ .bpad0 {
+   padding-bottom: 0px;
+ }
+
+ .bpad10 {
+   padding-bottom: 10px;
+ }
+
+ .bpad5 {
+   padding-bottom: 5px;
+ }
+
+ .tpad0 {
+   padding-top: 0px;
+ }
+
+ .tpad90 {
+   padding-top: 90px;
+ }
+
+ .tpad125 {
+   padding-top: 125px;
+ }
+
+ .ht100per {
+   height: 100%;
+ }
+
+ .ht100 {
+   height: 100px;
+ }
+
+ .ht75 {
+   height: 75px;
+ }
+
+ input[type='checkbox'] {
+   color: gray;
+   height: 50px;
+   width: 50px;
+ }
+
+ input[type='checkbox']:active {
+   color: green;
+   height: 50px;
+   width: 50px;
+ }
+
+ .minwid200 {
+   min-width: 200px;
+ }
+
+ .minwid150 {
+   min-width: 150px;
+ }
+
+ .maxwid200 {
+   max-width: 200px;
+ }
+
+ .op95 {
+   opacity: .95;
+ }
+
+ .op0 {
+   opacity: 0;
+ }
+
+ .pilgrim {
+   width: 75px;
+   height: auto;
+   margin-left: 0px;
+ }
+
+ .circle {
+   border: 1px solid gray;
+   border-radius: 50%;
+ }
+
+ .z {
+   z-index: -1;
+ }
+
+ .z1 {
+   z-index: 1;
+ }
+
+ .z3 {
+   z-index: 3;
+ }
+
+ .z2 {
+   z-index: 2;
+ }
+
+ .z4 {
+   z-index: 4;
+ }
+ .z100 {
+   z-index: 100;
+ }
+
+ .zminus2 {
+   z-index: -2;
+ }
+
+ .z0 {
+   z-index: 0;
+ }
+
+ .zplus1 {
+   z-index: +1;
+ }
+
+ .headliner {
+   width: 100%;
+   height: 350px;
+   object-fit: cover;
+ }
+
+ .drop-shadow {
+     position:relative;
+     float:left;
+     width:100%;
+     padding:1em;
+     margin:2em 10px 4em;
+     background:#fff;
+     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+ 	    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+ }
+
+ .drop-shadow:before,
+ .drop-shadow:after {
+     content:"";
+     position:absolute;
+     z-index:-2;
+ }
+
+ .drop-shadow p {
+     font-size:16px;
+     font-weight:bold;
+ }
+
+ /* Lifted corners */
+
+ .lifted {
+     -moz-border-radius:10px;
+ 	 border-radius:10px;
+ }
+
+ .lifted:before,
+ .lifted:after {
+     bottom:15px;
+     left:10px;
+     width:80%;
+     height:20%;
+     max-width:300px;
+     max-height:100px;
+     -webkit-box-shadow:0 15px 20px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow:0 15px 20px rgba(0, 0, 0, 0.7);
+ 	    box-shadow:0 15px 20px rgba(0, 0, 0, 0.7);
+     -webkit-transform:rotate(-3deg);
+        -moz-transform:rotate(-3deg);
+ 	-ms-transform:rotate(-3deg);
+ 	 -o-transform:rotate(-3deg);
+ 	    transform:rotate(-3deg);
+ }
+
+ .lifted:after {
+     right:10px;
+     left:auto;
+     -webkit-transform:rotate(3deg);
+        -moz-transform:rotate(3deg);
+ 	-ms-transform:rotate(3deg);
+ 	 -o-transform:rotate(3deg);
+ 	    transform:rotate(3deg);
+ }
+
+ .greengrd {
+   background-color: darkgreen;
+   height: 5px;
+   width: 100%;
+ }
+
+ .redgrd {
+   background-color: darkred;
+   height: 5px;
+   width: 100%;
+ }
+
+ .cyangrd {
+   background-color: darkcyan;
+   height: 5px;
+   width: 100%;
+ }
+
+ .orangegrd {
+   background-color: darkorange;
+   height: 5px;
+   width: 100%;
+ }
+
+ .bluegrd {
+   background-color: darkblue;
+   height: 5px;
+   width: 100%;
+ }
+
+ .vertcent {
+   vertical-align: middle;
+ }
+
+ .wrong {
+   text-decoration: line-through;
+ }
+
+ .visible {
+   visibility: visible;
+ }
+
+ .not-visible {
+   visibility: hidden;
+ };
+
+ .modaltitle {
+   font-family: 'Coming Soon', cursive;
+ }
+
+ .picshad {
+   -webkit-box-shadow: 1px 10px 17px 3px rgba(0,0,0,0.69);
+   -moz-box-shadow: 1px 10px 17px 3px rgba(0,0,0,0.69);
+   box-shadow: 1px 10px 17px 3px rgba(0,0,0,0.69);
+ }
+
+ .picshad2 {
+   -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+   -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+   box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+ }
+
+ .imgborder {
+    display:inline-block;
+    position:relative;
+    border:1px solid #ccc;
+    padding:5px;
+    padding-bottom: 0px;
+    background:#f2f2f2;
+ }
+
+ .posstick {
+   position: sticky;
+ }
+
+ .nobac {
+   background-color: transparent;
+ }
+
+ .ltgraybac {
+   background-color: #eee;
+ }
+
+ .textwrap {
+   overflow-wrap: normal;
+ }
+
+ .font75 {
+   font-size: 75px;
+ }
+
+ .modalpoint {
+   width: 33%;
+   display: inline-block;
+   vertical-align: middle;
+ }
+
+ .modalborder {
+   border: 25px solid darkgreen;
+ }
+
+ .scrollaround {
+   overflow: scroll;
+ }
+
+ .dropdown-menu {
+   max-height: 500px;
+   overflow-y: scroll;
+   overflow-x: scroll;
+ }
+
+ .zinit {
+   z-index: initial;
+ }
+
+ .scrollable-menu {
+   height: auto;
+   max-height: 300px;
+   overflow-x: hidden;
+   overflow-y: auto;
+ }
+
+ @media print {
+   body.modalprinter * {
+     visibility: hidden;
+   }
+
+   body.modalprinter .modal-dialog.focused {
+     position: absolute;
+     padding: 0;
+     margin: 0;
+     left: 0;
+     top: 0;
+   }
+
+   body.modalprinter .modal-dialog.focused .modal-content {
+     border-width: 0;
+   }
+
+   body.modalprinter .modal-dialog.focused .modal-content .modal-header .modal-title,
+   body.modalprinter .modal-dialog.focused .modal-content .modal-body,
+   body.modalprinter .modal-dialog.focused .modal-content .modal-body * {
+     visibility: visible;
+     width: 100%;
+   }
+
+   body.modalprinter .modal-dialog.focused .modal-content .modal-header,
+   body.modalprinter .modal-dialog.focused .modal-content .modal-body {
+     padding: 0;
+     width: 100%;
+   }
+
+   body.modalprinter .modal-dialog.focused .modal-content .modal-header .modal-title {
+       margin-bottom: 20px;
+   }
+ }
+
+ .dispin {
+   display: inline-block;
+ }

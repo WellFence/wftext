@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Wftext</title>
+    <title>WellFence</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Shadows+Into+Light" rel="stylesheet">
   </head>
-
   <body>
+    <% if flash[:notice] %>
+      <div class="alert alert-success cc">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= flash[:notice] %>
+      </div>
+    <% elsif flash[:alert] %>
+      <div class="alert alert-warning cc">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

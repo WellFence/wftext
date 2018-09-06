@@ -1,0 +1,31 @@
+<div class="container on-left ewid">
+  <h1 class="ifont fullwid">Submitted Registrations
+    <%= link_to "", welcome_index_path, class: "glyphicon grayfont glyphicon-home eefont pull-right nodec2" %>
+  </h1>
+  <div class="">
+    <%= form_tag(@person, method: :get) do %>
+      <%= text_field_tag :term, params[:term], placeholder: "First Name", class: "grayfont smallfont" %>
+      <%= submit_tag 'Search', first_name: nil %>
+      <% end %>
+  </div>
+  <div class="bmar50">
+  </div>
+    <% @people.each do |person| %>
+      <div class="col-md-4 bmar25">
+      <div class="bpad15 bline wid90per">
+        <%= person.first_name %> <%= person.last_name %><br>
+        <%= person.company %> - <%= person.position %><br>
+        ID: <%= person.card_number %><br>
+        H2S: <%= person.h2s %><br>
+        TEL:<%= person.phone %><br>
+        <small class="lmar2">Added on: <%= person.created_at %></small><br>
+        <small class="lmar2">While at: <%= person.rig %></small><br>
+        <%= link_to "", edit_person_path(person), class: "font3rem nodec2 glyphicon glyphicon-edit rpad50 tmar15" %>
+        <%= link_to "", person, method: :delete, class: 'font3rem nodec2 redfont glyphicon glyphicon-trash', data: {confirm: 'Are you sure you want to delete this Person?'} %>
+      </div>
+    </div>
+    <% end %>
+</div>
+<div class="grayfont tcent bmar50 row lmar25 rmar25">
+  <small class="tcent wid75per grayfont wid75per bmar25 lmar25 rmar25"> © 2017-2018 WellFence LLC. All Rights Reserved. Patented & Patent Pending. Wellfence ® is a registered trademark of Wellfence LLC.<br> Support: 832.940.9797</small>
+</div>

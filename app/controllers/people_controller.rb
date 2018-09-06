@@ -16,7 +16,6 @@ class PeopleController < ApplicationController
     @person = Person.new(person_params)
     if @person.save
       flash[:notice] = "Your registration has been submitted."
-      redirect_to welcome_index_path
     else
       flash.now[:alert] = "There was an error saving your new to-do item. Please try again."
       render :new

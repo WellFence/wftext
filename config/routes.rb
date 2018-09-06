@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :people
 
+  get 'people/new'
+
   get 'welcome/index'
 
   root 'welcome#index'

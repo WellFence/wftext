@@ -5,7 +5,7 @@
 <div class="container tcent">
   <div class="row tcent">
     <div class="col-md-6 bmar50 tcent">
-      <%= form_for [@person] do |f| %>
+      <%= form_for @person do |f| %>
         <% if @person.errors.any? %>
           <div class="alert alert-danger">
             <h4><%= pluralize(@person.errors.count, "error") %></h4>

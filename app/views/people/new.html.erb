@@ -34,7 +34,7 @@
         <%= f.text_field :phone, class: 'form-control', placeholder: "8001234567", required: true %><br>
 
         <%= f.label :H2S_Expiration_Date, class: "pull-left" %><br>
-        <%= f.text_field :h2s, class: 'form-control', required: true %><br>
+        <%= f.date_field :h2s, class: 'form-control', required: true %><br>
 
         <%= f.label :Do_you_have_a_WellFence_card?, class: "pull-left" %><br>
         <%= f.check_box :has_card, class: 'form-control font3rem dispin', placeholder: "", required: true %><br>
@@ -43,7 +43,7 @@
         <%= f.text_field :card_number, class: 'form-control', placeholder: "" %><br>
 
         <%= f.label :rig, class: "pull-left" %><br>
-        <%= f.text_field :rig, class: 'form-control', placeholder: "", required: true %><br>
+        <%= f.text_field :rig, class: 'form-control', placeholder: "Patterson 287", required: true %><br>
 
         <%= f.submit "Submit", class: 'btn btn-primary font5rem' %>
       </div>

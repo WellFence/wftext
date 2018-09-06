@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   post 'twilio/sms'
+  post 'people/index'
 
   resources :people
 

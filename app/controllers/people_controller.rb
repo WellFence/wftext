@@ -46,10 +46,10 @@ class PeopleController < ApplicationController
 
     if @person.destroy
       flash[:notice] = "\"#{@person.first_name}\" was deleted successfully."
-      redirect_to action: :index
+      redirect_to people_path
     else
       flash.now[:alert] = "There was an error deleting this person."
-      render :show
+      redirect_to people_path
     end
   end
 

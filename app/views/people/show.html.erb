@@ -2,7 +2,6 @@
     <div class="col-md-8">
       <div class="media">
           <div class="container on-left lmar tpad">
-
             <div class="container on-left ewid">
               <h1 class="ifont fullwid">People</h1>
               <div class="on-bottom"></div>
@@ -10,7 +9,6 @@
                 <div class="bgwh">
                   <% @people.each do |person| %>
                     <h4 class="lmar2">
-                      <%= link_to "", person_path, class: "glyphicon glyphicon-record" %>
                       <%= person.first_name %> <%= person.first_name %><br>
                       <%= person.company %> | <%= person.position %><br>
                       <%= person.card_number %> | <%= person.h2s %><br><br>

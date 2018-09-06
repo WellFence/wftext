@@ -4,10 +4,12 @@ class PeopleController < ApplicationController
     @people = Person.search(params[:term])
   end
 
-  
+  def show
+    @people = Person.all
+  end
 
   def new
-    @person = Person.new
+    @people = Person.new
   end
 
   def create

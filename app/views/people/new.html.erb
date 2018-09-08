@@ -34,10 +34,10 @@
         <%= f.text_field :phone, class: 'form-control', placeholder: "8001234567", required: true %><br>
 
         <%= f.label :h2s, 'H2S Expiration Date', class: "pull-left" %><br>
-        <%= f.text_field :h2s, class: 'form-control', required: true %><br>
+        <%= f.date_field :h2s, class: 'form-control', required: true %><br>
 
         <%= f.label :Do_you_have_a_WellFence_card?, class: "pull-left" %><br>
-        <%= f.check_box :has_card, class: 'form-control font3rem dispin', placeholder: "", required: true %><br>
+        <%= f.check_box :has_card, class: 'form-control font3rem dispin', placeholder: "" %><br>
 
         <%= f.label :WellFence_card_number, class: "pull-left" %><br><br>
         <%= f.text_field :card_number, class: 'form-control', placeholder: "" %><br>

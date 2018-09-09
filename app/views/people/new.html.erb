@@ -36,16 +36,43 @@
         <%= f.label :h2s, 'H2S Expiration Date', class: "pull-left" %><br>
         <%= f.date_field :h2s, class: 'form-control', required: true %><br>
 
-        <%= f.label :Do_you_have_a_WellFence_card?, class: "pull-left" %><br>
-        <%= f.check_box :has_card, class: 'form-control font3rem dispin', placeholder: "" %><br>
-
-        <%= f.label :WellFence_card_number, class: "pull-left" %><br><br>
-        <%= f.text_field :card_number, class: 'form-control', placeholder: "" %><br>
+        <%= f.label :document, "Upload picture of H2S Card", class: "pull-left" %>
+        <%= f.file_field :document, :html =>  { :multipart => true }, enctype: "multipart/form-data" %><br>
 
         <%= f.label :rig, class: "pull-left" %><br>
         <%= f.text_field :rig, class: 'form-control', placeholder: "Patterson 287", required: true %><br>
 
-        <%= f.submit "Submit", class: 'picshad btn btn-primary font5rem' %>
+        <div id="checkbox">
+          <%= f.label :Do_you_have_a_WellFence_card?, class: "pull-left" %><br>
+          <%= f.check_box :has_card, class: 'font3rem dispin', placeholder: "" %><br>
+        </div>
+
+        <div id="cardnum">
+          <%= f.label :WellFence_card_number, class: "pull-left" %><br><br>
+          <%= f.text_field :card_number, class: 'form-control', placeholder: "" %><br>
+        </div>
+
+        <div id="correct" data-toggle="modal" data-target="#yesModal">
+          <%= f.submit "Submit", class: 'picshad btn btn-primary font5rem tmar25' %>
+        </div>
+        <div class="row ofont tpad0 tmar0 tcent">
+          <div id="yesModal" class="modal fade" role="dialog">
+            <div class="modal-dialog tmar10per">
+              <div class="modal-content">
+                <%= render partial: 'people/modal', class: "z2", locals: { people: @people } %>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-10 tcent">
+                      <p>Thanks for registering. We will reach out to you promptly with further instructions.</p>
+                    </div>
+                    <div class="col-md-2 tcent tpad25">
+                      <%= link_to "", welcome_index_path, class: "glyphicon glyphicon-circle-arrow-right pull-right bbbbfont animated infinite pulse pulse nodec font7rem" %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     <% end %>
   </div>

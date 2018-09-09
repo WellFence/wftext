@@ -34,3 +34,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'puma', '~> 3.0'
 gem 'figaro', '1.0'
 gem 'twilio-ruby'
+gem 'carrierwave', '1.0'
+gem 'mini_magick'

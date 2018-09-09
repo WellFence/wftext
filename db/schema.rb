@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180905211523) do
+ActiveRecord::Schema.define(version: 20180909012901) do
 
   create_table "people", force: :cascade do |t|
     t.string   "first_name"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 20180905211523) do
     t.string   "rig"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "document_id"
+    t.string   "document"
+    t.index ["document_id"], name: "index_people_on_document_id"
   end
 
 end

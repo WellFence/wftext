@@ -14,3 +14,11 @@
 //= require bootstrap
 //= require jquery_ujs
 //= require_tree .
+
+//registration for hidden card number field unless check box field is true
+$(document).ready(function() {
+  $('#cardnum').hide(); //Initially form wil be hidden.
+  $('#checkbox').click(function() {
+    $('#cardnum').show();//Form shows on button click
+  });
+});

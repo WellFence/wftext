@@ -1,0 +1,187 @@
+<div id="topnav" class="topnav container wid100per whiteback ht75 tmar0 tpad0 zplus lmar0 lpad0">
+  <div class="font2rem container wid100per whiteback ht75 tmar0 tpad0 zplus lmar0 lpad0">
+    <div>
+      <div class="afont font2rem pull-left posfx whiteback tmar0 tpad40 bline zplus1">
+        <%= link_to "Little Pilgrims Theology", welcome_index_path, class: "nodec lpad75" %>
+      </div>
+      <%= link_to(image_tag("pilgrim-logo.png", :alt => "pilgrim-logo", class: "afont pilgrim posfx whiteback lpad10 tpad5 bline bpad5 zplus1"), welcome_index_path) %>
+      <div class= "pull-right tmar25 wid100per posrel zplus1">
+        <a href="#menu" class="glyphicon glyphicon-menu-hamburger ccfont pull-right nodec posfx lmar90per tmar25" id="hamburger">
+        </a>
+        <nav id="menu" class="font2rem tcent ralefont z100 posfx tmar150">
+          <ul class="rmar25 tmar15 font2rem ralefont">
+            <div>
+              <%= image_tag src="favicon-96x96 copy.png", class: "circle shadow tmar15 image-responsive" %>
+              <p class="aafont tpad10 bpad15">Little Pilgrims Theology</p>
+            </div>
+            <% if user_signed_in? %>
+            <li>
+              <small class="grayfont">logged in as:
+                <strong class="whitefont tmar10"><%= current_user.first_name %></strong>
+              </small>
+            </li>
+            <% end %>
+            <li class="hvr-glow">
+              <%= link_to "Home", welcome_index_path, class: "font2point5rem" %>
+            </li>
+            <li class="hvr-glow">
+              <span class="tcent ralefont pad15 font2point5rem">About</span>
+              <ul>
+                <li class="hvr-glow">
+                  <%= link_to "What is Little Pilgrims?", welcome_promo_path, class: "font2point5rem" %>
+                </li>
+                <li class="hvr-glow">
+                  <%= link_to "About Us", welcome_about_path, class: "font2point5rem" %>
+                </li>
+                <li class="hvr-glow">
+                  <%= link_to "What We Teach", welcome_teach_path, class: "font2point5rem" %>
+                </li>
+                <li>
+                  <%= link_to "Contact Us", welcome_contact_us_path, class: "font2point5rem" %>
+                </li>
+              </ul>
+            </li>
+            <li class="hvr-glow">
+              <span class="ralefont font2point5rem">Content</span>
+              <ul>
+                <li>
+                  <%= link_to "All Content", materials_index_path, class: "font2point5rem" %>
+                </li>
+              <% if user_signed_in? %>
+                <li>
+                  <%= link_to "Basics of the Faith", basics_index_path, class: "font2point5rem" %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to "Basics of the Faith", welcome_basics_promo_path, class: "font2point5rem" %>
+                </li>
+              <% end %>
+              <% if user_signed_in? %>
+                <li>
+                  <%= link_to "ABC Theology", abc_theologies_index_path, class: "font2point5rem" %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to "ABC Theology", welcome_abc_promo_path, class: "font2point5rem" %>
+                </li>
+              <% end %>
+              <% if user_signed_in? %>
+                <li>
+                  <%= link_to "Church History", history_index_path, class: "font2point5rem" %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to "Church History", welcome_history_promo_path, class: "font2point5rem" %>
+                </li>
+              <% end %>
+              <% if user_signed_in? %>
+                <li>
+                  <%= link_to "Soteriology", soter_index_path, class: "font2point5rem" %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to "Soteriology", welcome_soter_promo_path, class: "font2point5rem" %>
+                </li>
+              <% end %>
+              <% if user_signed_in? %>
+                <li>
+                  <%= link_to "Angelology", angels_index_path, class: "font2point5rem" %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to "Angelology", welcome_angels_promo_path, class: "font2point5rem" %>
+                </li>
+              <% end %>
+              </ul>
+            </li>
+            <li class="hvr-glow">
+              <%= link_to "Shop", products_index_path, class: "ralefont font2point5rem" %>
+            </li>
+            <% if user_signed_in? %>
+              <li class="hvr-glow">
+                <%= link_to "Settings", edit_user_registration_path, class: "font2point5rem" %>
+              </li>
+            <% end %>
+            <li class="hvr-glow bmar5">
+              <% if user_signed_in? %>
+                <%= link_to "Sign Out", destroy_user_session_path, method: :get, class: "font2point5rem" %>
+              <% else %>
+                <%= link_to "Sign Up", new_user_registration_path, class: "font2point5rem"  %>
+                <li class="hvr-glow">
+                  <%= link_to "Log In", new_user_session_path, class: "font2point5rem" %>
+                </li>
+              <% end %>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="efont font2rem posrel tcent wid100per whiteback2 tmar0">
+    <strong>biblical theology for growing minds</strong>
+  </div>
+</div>
+  <div class="container tcent dfont bmar0 tmar15">
+    <div class="jumbotron bmar0 bpad25 tpad25 tmar25">
+      <div class="whiteground tpad15">
+        <h2 class="ofont font5rem tpad0 tmar0 bline tcent bmar0 bpad15">It's All About Him</h2>
+        <h2 class="ofont tpad0 tmar0"></h2>
+        <h4 class="ofont tpad0">
+          <strong>
+            Hello, and welcome to Little Pilgrims Theology. I am Brandon, and my wife Jeannette and I have created Little Pilgrims Theology all to the praise, honor, and glory of God. We have four children at present, and in being convicted to homeschool them, we are always seeking engaging ways to train our children up in the nurture and admonition of the Lord.  Yet all too frequently, the resources we find are either too shallow, too scholarly, or contain unbiblical teachings. There is a gap that exists between early-learning and seminary-level learning.  This was the driving motivator for the creation and design of Little Pilgrims Theology.  We want to bridge that gap so that young learners can have the opportunity to grow in greater depth and knowledge of biblical truth.<br>
+
+            <div class="lmar50 rmar50 efont font3rem tmar0 tpad0 bmar0 bpad0">
+              <strong><br>
+              "Fathers, do not provoke your children to anger, but bring them up in the discipline and instruction of the Lord."<br>
+                <div class="pull-right">Eph. 6:4</div><br>
+              </strong>
+            </div><br>
+
+            Little Pilgrims Theology was born out of a void and a desire; the void being a nonexistent resource available that offers educators an avenue to teach the next level of theology to growing minds, and the desire to bring that resource to life for the glory of God.  Our goal is to create, maintain, and continuously improve an edifying resource that challenges a wide range of learners in a way that is fun, memorable, and pleasing to God.<br><br>
+
+            Little Pilgrims Theology is all about furthering the kingdom of God by explaining the gospel of Jesus Christ according to scripture alone.  Every jot and tiddle of the content here has been thoroughly examined and considered, to the best of our ability, to serve as a conduit to further the gospel through proper biblical teaching.<br><br>
+
+            Life is a vapor, and sooner than later there comes a time when learners are ready to move on from spiritual milk to more solid food that is found in the Bible.  The contemporary education model teaches to the lowest level, with the philosophy of 'How low can we set the bar so that the least amount of effort can be exerted to still gain the prize?'  We reject that philosophy and instead opt for challenging learners to strive for excellence in education, working with all their hearts as if for God, and not for men.<br><br>
+
+            <div class="lmar50 rmar50 efont font3rem tmar0 tpad0 bmar0 bpad0">
+              <strong>"Do you not know that those who run in a race all run, but only one receives the prize? Run in such a way that you may win."<br>
+                <div class="pull-right">2 Cor. 9:25</div><br>
+              </strong>
+            </div><br>
+
+            Little Pilgrims Theology is packed full of sound biblical doctrine, uncovering doctrinal treasures of faith. From the core matters of the gospel, to secondary aspects of the faith, Little Pilgrims Theology is loaded with the rightly-handled word of God. This equips young learners with sound theology and helps prepare their hearts and minds for the day when they will be forced to reckon with the schemes of the evil one as he works to deceive, even the elect for a time.  The instruction that Little Pilgrims Theology offers serves to guard against these schemes of the devil so that they can confidently stand firm in the faith, and more readily identify unbiblical teaching.<br><br>
+
+            <div class="lmar50 rmar50 efont font3rem tmar0 tpad0 bmar0 bpad0">
+              <strong>"In pointing out these things to the brethren, you will be a good servant of Christ Jesus, constantly nourished on the words of the faith and of the sound doctrine which you have been following."
+                <div class="pull-right">1 Tim. 4:6</div><br>
+              </strong>
+            </div><br><br>
+
+            Little Pilgrims Theology is not meant to be a replacement for the Bible, nor for a solid local church, but it is meant to be a supplement to all of these.  Our goal is simply to put a trustworthy resource, that rightly handles the word of truth, in the hands of parents, educators, and learners.  We want Little Pilgrims Theology to be flexible enough so that the content can be tailored for an individualized educational focus. While we organize the content of Little Pilgrims thematically, topically, and categorically, it is in no way restrictive.  This makes the content versatile. For example, yes, we teach the meaning of "Christ" for the letter "C" in ABC Theology, but a learner or educator isn't required to build an entire educational model around ABC Theology (Although that would be really cool!). But rather, it is certainly feasible that a Sunday class teacher might readily (and quickly) use a two minute video clip on "Christ" as a supplement to grab the attention of the learners.  The possibilities of the flexible content of Little Pilgrims Theology are extensive.<br><br>
+
+            Are you teaching your nine year old about God's grace?  Quick! Put on the short ABC Theology video for the letter "I", which is on Irresistible Grace.  Let loose the word of God, and watch it not return void as learners grow to understand how marvelously sovereign God is in His infinite grace. Whether you are a parent, grandparent, Church, or Christian Institution, Little Pilgrims Theology is a trusted resource to provide engaging biblical teaching for growing minds.<br><br>
+
+            Our prayer is that Little Pilgrims Theology brings the gospel of Jesus Christ and sound teaching to whomever might profit from it; young and old alike, and that the presentation of scripture will reach the lost, bringing about faith and repentance unto new and eternal life in Christ Jesus.  We pray also for those believers who by faith alone have already repented and believed in Christ, and that they would find great joy in continually revisiting scripture, abiding in Christ, in faithful love and obedience to His word.<br><br><br>
+
+            <div class="row">
+              <div class="cold-md-8 pull-left lmar15 rpad50 tpad50">
+                For Christ,<br><br>
+                Brandon and Jeannette Mills<br><br>
+                The creators of Little Pilgrims Theology<br><br>
+              </div>
+              <div class="col-md-4 tcent img-responsive">
+                <%= image_tag("fam.JPG", :alt => "family-photo", width: "auto", class: "imgborder picshad img-responsive") %>
+              </div>
+            </div>
+          </strong>
+        </h4>
+        <div class="tmar25 tpad25 posrel tline wid100per bpad15">
+          <%= link_to "", welcome_index_path, class: "glyphicon glyphicon-home font3rem ccfont" %>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="tcent rmar50">
+  <h3><strong class="efont 1point5rem">"Sanctify them in the truth; your word is truth."  John 17:17</strong></h3>
+</div>
+<%= render partial: 'welcome/map', locals: { welcome: @welcome } %>

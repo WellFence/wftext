@@ -36,8 +36,8 @@
         <%= f.label :h2s, 'H2S Expiration Date', class: "pull-left" %><br>
         <%= f.date_field :h2s, class: 'form-control', required: true %><br>
 
-        <%= f.label :document, "Upload picture of H2S Card", class: "pull-left" %>
-        <%= f.file_field :document, :html =>  { :multipart => true }, enctype: "multipart/form-data" %><br>
+        <%= f.label :document, "Picture of H2S Card required", class: "pull-left" %><br>
+        <%= f.file_field :document, :html =>  { :multipart => true }, enctype: "multipart/form-data", class: 'form-control', required: true %><br>
 
         <%= f.label :rig, class: "pull-left" %><br>
         <%= f.text_field :rig, class: 'form-control', placeholder: "Patterson 287", required: true %><br>

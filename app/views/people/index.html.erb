@@ -2,18 +2,28 @@
   <h1 class="ifont fullwid">Submitted Registrations
     <%= link_to "", welcome_index_path, class: "glyphicon grayfont glyphicon-home eefont pull-right nodec2" %>
   </h1>
+  <div class="">
+    <%= form_tag(@person, method: :get) do %>
+      <%= text_field_tag :term, params[:term], placeholder: "First Name", class: "grayfont smallfont" %>
+      <%= submit_tag 'Search', first_name: nil %>
+      <% end %>
+  </div>
 </div>
   <div class="bmar50">
   </div>
     <% @people.each do |person| %>
       <div class="col-md-4 bmar25">
       <div class="bpad15 bline wid90per">
-        <%= person.first_name %> <%= person.last_name %><br>
+        <%= link_to "#{person.first_name} #{person.last_name}", person_path(@person, id: person.id), class: "font2rem" %><br>
+        <% if person.completed != true %>
+          <span class="glyphicon glyphicon-warning-sign redfont"> - INCOMPLETE</span><br>
+          <%= link_to " - Mark Complete", person_path(person, id: person.id), method: :mark_complete, class: "glyphicon glyphicon-check greenfont" %><br>
+        <% end %>
         <%= person.company %> - <%= person.position %><br>
         TEL:<%= person.phone %><br>
         ID: <%= person.card_number %><br>
         H2S: <%= person.h2s %><br>
-        IMG: <%= person.document.file %><br>
+        IMG: <%= image_tag(person.document.thumb.url, alt: 'Image') if person.document? %><br>
         <small class="lmar2">Added on: <%= person.created_at %></small><br>
         <small class="lmar2">While at: <%= person.rig %></small><br>
         <%= link_to "", edit_person_path(person), class: "font3rem nodec2 glyphicon glyphicon-edit rpad50 tmar15" %>

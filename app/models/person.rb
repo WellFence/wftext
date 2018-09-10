@@ -1,5 +1,7 @@
 class Person < ApplicationRecord
   default_scope { order(created_at: :desc) }
+  scope :incomplete, -> { where("completed IS NULL or completed = ?", false)}
+  scope :completed, -> { where(completed: true)}
 
   mount_uploader :document, DocumentUploader
   serialize :avatars, JSON
@@ -10,6 +12,10 @@ class Person < ApplicationRecord
     else
       all
     end
+  end
+
+  def mark_complete
+    @person.complete!
   end
 
 end

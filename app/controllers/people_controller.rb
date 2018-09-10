@@ -62,6 +62,18 @@ class PeopleController < ApplicationController
     end
   end
 
+  def mark_completed
+    @people = Person.all
+    @person = Person.find(params[:id])
+    if @person.update_attribute(:completed, true)
+      flash[:notice] = "\"#{@person.first_name}\" successfully marked complete."
+      redirect_to people_path
+    else
+      flash.now[:alert] = "There was an error marking this person complete, try again."
+      render :show
+    end
+  end
+
   private
 
   def notify_wellfence
@@ -70,7 +82,7 @@ class PeopleController < ApplicationController
     @client = Twilio::REST::Client.new(account_sid, auth_token)
     @client.messages.create(
       from: "+18306421354",
-        to: ["+12104008165"],
+        to: ["+12104008165", "+18322820867"],
       body: "#{@person.first_name} #{@person.last_name}\n #{@person.company}\n #{@person.position}\n #{@person.email}\n Phone: #{@person.phone}\n ID:#{@person.card_number}\n H2S: #{@person.document}")
   end
 

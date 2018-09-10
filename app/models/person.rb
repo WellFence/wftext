@@ -14,8 +14,4 @@ class Person < ApplicationRecord
     end
   end
 
-  def mark_complete
-    @person.complete!
-  end
-
 end

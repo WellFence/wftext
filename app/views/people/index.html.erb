@@ -17,13 +17,13 @@
         <%= link_to "#{person.first_name} #{person.last_name}", person_path(@person, id: person.id), class: "font2rem" %><br>
         <% if person.completed != true %>
           <span class="glyphicon glyphicon-warning-sign redfont"> - INCOMPLETE</span><br>
-          <%= link_to " - Mark Complete", person_path(person, id: person.id), method: :mark_complete, class: "glyphicon glyphicon-check greenfont" %><br>
+          <%= link_to " - Mark Complete", people_mark_completed_path(@person, id: person.id), method: :mark_complete, class: "glyphicon glyphicon-check greenfont" %><br>
         <% end %>
         <%= person.company %> - <%= person.position %><br>
         TEL:<%= person.phone %><br>
         ID: <%= person.card_number %><br>
         H2S: <%= person.h2s %><br>
-        IMG: <%= image_tag(person.document.thumb.url, alt: 'Image') if person.document? %><br>
+        IMG: <%= image_tag(person.document.thumb.url, alt: 'Image', class: 'wid150') if person.document? %><br>
         <small class="lmar2">Added on: <%= person.created_at %></small><br>
         <small class="lmar2">While at: <%= person.rig %></small><br>
         <%= link_to "", edit_person_path(person), class: "font3rem nodec2 glyphicon glyphicon-edit rpad50 tmar15" %>
@@ -32,6 +32,6 @@
     </div>
     <% end %>
 </div>
-<div class="grayfont tcent bmar50 row lmar25 rmar25">
+<div class="grayfont tcent bmar50 row lmar25 rmar25 dispin wid100per tmar50">
   <small class="tcent wid75per grayfont wid75per bmar25 lmar25 rmar25"> © 2017-2018 WellFence LLC. All Rights Reserved. Patented & Patent Pending. Wellfence ® is a registered trademark of Wellfence LLC.<br> Support: 832.940.9797</small>
 </div>

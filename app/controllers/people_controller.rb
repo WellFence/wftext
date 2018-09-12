@@ -22,6 +22,7 @@ class PeopleController < ApplicationController
       render :new
     end
     notify_wellfence
+    redirect_to welcome_index_path
   end
 
   def edit

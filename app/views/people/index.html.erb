@@ -4,10 +4,11 @@
   </div>
   <div class="row tcent">
     <%= link_to "", welcome_index_path, class: "glyphicon grayfont glyphicon-home eefont pull-right nodec2 font3rem dispin tmar5 rmar25" %>
-    <div class="wid250 tpad10 dispin pull-left">
+    <div class="tpad10 dispin pull-left">
       <%= form_tag(people_path, method: :get) do %>
-        <%= text_field_tag(:search, params[:search]) %>
-        <%= submit_tag("Search", class: "btn btn-primary", placeholder: "First name") %>
+        <%=link_to "", people_path, class: "glyphicon glyphicon-refresh nodec2 rpad10 bluefont font2rem dispin lmar15" %>
+        <%= text_field_tag(:search, params[:search], placeholder: "First name") %>
+        <%= submit_tag("Search", class: "btn btn-primary") %>
       <% end %>
     </div>
   </div>

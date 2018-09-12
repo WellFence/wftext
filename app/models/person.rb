@@ -8,7 +8,7 @@ class Person < ApplicationRecord
 
   def self.search(search)
     if search
-      person = Person.find_by(first_name: search)
+      person = Person.where("first_name like ?", search)
       if person
         self.where(id: person)
       else

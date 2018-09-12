@@ -1,6 +1,5 @@
 <div class="container on-left ewid tmar25">
-  <div class="ifont fullwid bline bpad15 font4rem">Submitted Registrations<br>
-    <span class="font1rem pull-right bmar0 bpad0 wid100"><%= Person.count %> users registered</span>
+  <div class="ifont fullwid bline bpad15 font4rem"><%= @person.first_name %> <%= @person.last_name %><br>
   </div>
   <%= link_to "", people_path, class: "glyphicon grayfont glyphicon-arrow-left eefont pull-left nodec2 font3rem tmar5" %>
   <%= link_to "", welcome_index_path, class: "glyphicon grayfont glyphicon-home eefont pull-right nodec2 font3rem tmar5" %><br>
@@ -8,7 +7,6 @@
   </div>
       <div class="col-md-4 bmar25">
       <div class="bpad15 bline wid90per">
-        <span class="font2rem"><%= @person.first_name %> <%= @person.last_name %></span><br>
         <% if @person.completed != true %>
           STATUS: <span class="glyphicon glyphicon-warning-sign redfont"> - INCOMPLETE</span><br>
           ACTION: <%= link_to " - Mark Complete", people_mark_completed_path(@person, id: @person.id), method: :mark_complete, class: "glyphicon glyphicon-ok greenfont" %><br>

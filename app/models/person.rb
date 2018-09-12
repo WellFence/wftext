@@ -6,11 +6,16 @@ class Person < ApplicationRecord
   mount_uploader :document, DocumentUploader
   serialize :avatars, JSON
 
-  def self.search(term)
-    if term
-      where('first_name LIKE ?', "%#{term}%")
+  def self.search(search)
+    if search
+      person = Person.find_by(first_name: search)
+      if person
+        self.where(id: person)
+      else
+        Person.all
+      end
     else
-      all
+      Person.all
     end
   end
 

@@ -1,7 +1,6 @@
 class PeopleController < ApplicationController
   def index
-    @people = Person.all
-    @people = Person.search(params[:term])
+    @people = Person.search(params[:search])
   end
 
   def show
@@ -16,14 +15,6 @@ class PeopleController < ApplicationController
   def create
     @person = Person.new(person_params)
     @person.completed = false
-    #@person.document = params[:file] # Assign a file like this, or
-    # like this
-    # File.open('app/assets/images/') do |f|
-      # @person.document = f
-    # end
-    #@person.document.url  => 'app/assets/images/file.png'
-    #@person.document.current_path  => 'app/assets/images/file.png'
-    #@person.document_identifier   => 'file.png'
     if @person.save
       flash[:notice] = "Your registration has been submitted."
     else
@@ -82,12 +73,12 @@ class PeopleController < ApplicationController
     @client = Twilio::REST::Client.new(account_sid, auth_token)
     @client.messages.create(
       from: "+18306421354",
-        to: ["+12104008165", "+18322820867"],
+        to: "+12104008165",
       body: "#{@person.first_name} #{@person.last_name}\n #{@person.company}\n #{@person.position}\n #{@person.email}\n Phone: #{@person.phone}\n ID:#{@person.card_number}\n H2S: #{@person.document}")
   end
 
   def person_params
-    params.require(:person).permit(:first_name, :last_name, :company, :position, :email, :phone, :h2s, :has_card, :card_number, :rig, :id, :document, :completed)
+    params.require(:person).permit(:first_name, :last_name, :company, :position, :email, :phone, :h2s, :has_card, :card_number, :rig, :id, :document, :completed, :search)
   end
 
 end

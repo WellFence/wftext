@@ -17,6 +17,10 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+ .ht50 {
+   height: 50px;
+ }
+
  .mailchimpformborder {
    border: 1px solid gray;
  }
@@ -1457,6 +1461,14 @@
   margin-top: -30px;
  }
 
+ .tmarneg50 {
+  margin-top: -50px;
+ }
+
+ .tmarneg70 {
+  margin-top: -70px;
+ }
+
  .tmar {
   margin-top: 100px;
  }
@@ -1501,6 +1513,10 @@
 
  .wid200 {
    width: 200px;
+ }
+
+ .wid225 {
+   width: 225px;
  }
 
  .wid250 {

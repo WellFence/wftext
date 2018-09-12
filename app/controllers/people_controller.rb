@@ -66,13 +66,24 @@ class PeopleController < ApplicationController
     end
   end
 
+  def waiting
+    @people = Person.all
+    @person = Person.find(params[:id])
+    if @person.update_attribute(:waiting, false)
+      flash[:notice] = "\"#{@person.first_name}\"no longer waiting."
+      redirect_to people_path
+    else
+      flash.now[:alert] = "There was an error processing this update, try again."
+      render :show
+    end
+  end
+
   private
 
   def notify_wellfence
     account_sid = ENV['ACCOUNT_SID']
     auth_token = ENV['AUTH_TOKEN']
     @client = Twilio::REST::Client.new(account_sid, auth_token)
-
 
     @client.messages.create(
       from: "+18306421354",
@@ -82,11 +93,11 @@ class PeopleController < ApplicationController
     @client.messages.create(
       from: "+18306421354",
         to: "+12104008165",
-      body: "#{@person.first_name} #{@person.last_name}\n #{@person.company}\n #{@person.position}\n #{@person.email}\n Phone: #{@person.phone}\n ID:#{@person.card_number}\n H2S: #{@person.document}")
+      body: "WAITING: #{@person.waiting}\n #{@person.first_name} #{@person.last_name}\n #{@person.company}\n #{@person.position}\n #{@person.email}\n Phone: #{@person.phone}\n ID:#{@person.card_number}\n H2S: #{@person.document}\n")
   end
 
   def person_params
-    params.require(:person).permit(:first_name, :last_name, :company, :position, :email, :phone, :h2s, :has_card, :card_number, :rig, :id, :document, :completed, :search)
+    params.require(:person).permit(:first_name, :last_name, :company, :position, :email, :phone, :h2s, :has_card, :card_number, :rig, :id, :document, :completed, :search, :waiting)
   end
 
 end

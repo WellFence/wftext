@@ -2,6 +2,7 @@ class Person < ApplicationRecord
   default_scope { order(created_at: :desc) }
   scope :incomplete, -> { where("completed IS NULL or completed = ?", false)}
   scope :completed, -> { where(completed: true)}
+  scope :waiting, -> { where(waiting: true)}
 
   mount_uploader :document, DocumentUploader
   serialize :avatars, JSON

@@ -16,9 +16,9 @@ class PeopleController < ApplicationController
     @person = Person.new(person_params)
     @person.completed = false
     if @person.save
-      flash[:notice] = "Your registration has been submitted."
+      flash[:notice] = "Thank you for registering. We will reach out to you promptly with further instructions."
     else
-      flash.now[:alert] = "There was an error saving your new to-do item. Please try again."
+      flash.now[:alert] = "There was an error with your submission. Please try again."
       render :new
     end
     notify_wellfence

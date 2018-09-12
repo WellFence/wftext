@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+<% if flash[:notice] %>
+  <div class="tpad25px tcent alert alert-success z4 wid100per alertbanner ralefont">
+    <button type="button" class="close tpad0 pull-right alertbanner" data-dismiss="alert">x</button>
+    <div class="tpad10">
+      <%= flash[:notice] %>
+    </div>
+  </div>
+<% elsif flash[:alert] %>
+  <div class="tcent tpad25 alert alert-warning z4 wid100per alertbanner ralefont">
+    <button type="button" class="close tpad0 pull-right alertbanner" data-dismiss="alert">X</button>
+    <div class="tpad10">
+      <%= flash[:alert] %>
+    </div>
+  </div>
+<% end %>
 <html>
   <head>
     <title>WellFence</title>
@@ -9,17 +24,6 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <% if flash[:notice] %>
-      <div class="alert alert-success cc">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <%= flash[:notice] %>
-      </div>
-    <% elsif flash[:alert] %>
-      <div class="alert alert-warning cc">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <%= flash[:alert] %>
-      </div>
-    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -72,9 +72,16 @@ class PeopleController < ApplicationController
     account_sid = ENV['ACCOUNT_SID']
     auth_token = ENV['AUTH_TOKEN']
     @client = Twilio::REST::Client.new(account_sid, auth_token)
+
+
     @client.messages.create(
       from: "+18306421354",
-        to: ["+12104008165", "+18322820867"],
+        to: "+18322820867",
+      body: "#{@person.first_name} #{@person.last_name}\n #{@person.company}\n #{@person.position}\n #{@person.email}\n Phone: #{@person.phone}\n ID:#{@person.card_number}\n H2S: #{@person.document}")
+
+    @client.messages.create(
+      from: "+18306421354",
+        to: "+12104008165",
       body: "#{@person.first_name} #{@person.last_name}\n #{@person.company}\n #{@person.position}\n #{@person.email}\n Phone: #{@person.phone}\n ID:#{@person.card_number}\n H2S: #{@person.document}")
   end
 

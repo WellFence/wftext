@@ -2,6 +2,7 @@
   <%= link_to(image_tag("wflogo.PNG", class: "wid200"), welcome_index_path) %>
   <p class="lmar50 lpad5 tmarneg22 font1font1pointfive">Credentialed Wellsite Access</p>
 </div>
+<div class="tcent tpad25"><strong class="redfont">*</strong> <i class="grayfont">Indicates required field</i></div>
 <div class="tcent posrel">
   <div class="dispin bmar50 tcent pad25">
     <%= form_for [@person] do |f| %>
@@ -15,36 +16,36 @@
           </ul>
         </div>
       <% end %>
-        <%= f.label :first_name, class: "pull-left" %><br>
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :first_name, class: "pull-left" %><br>
         <%= f.text_field :first_name, class: 'form-control', required: true %><br>
 
-        <%= f.label :last_name, class: "pull-left" %><br>
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :last_name, class: "pull-left" %><br>
         <%= f.text_field :last_name, class: 'form-control', required: true %><br>
 
-        <%= f.label :Company, class: "pull-left" %><br>
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :Company, class: "pull-left" %><br>
         <%= f.text_field :company, class: 'form-control', required: true %><br>
 
-        <%= f.label :position, class: "pull-left" %><br>
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :position, class: "pull-left" %><br>
         <%= f.text_field :position, class: 'form-control', required: true %><br>
 
-        <%= f.label :email, class: "pull-left" %><br>
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :email, class: "pull-left" %><br>
         <%= f.text_field :email, class: 'form-control', placeholder: "" %><br>
 
-        <%= f.label :phone_number, class: "pull-left" %><br>
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :phone_number, class: "pull-left" %><br>
         <%= f.text_field :phone, class: 'form-control', placeholder: "8001234567", required: true %><br>
 
-        <%= f.label :h2s, 'H2S Expiration Date', class: "pull-left" %><br>
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :h2s, 'H2S Expiration Date', class: "pull-left" %><br>
         <%= f.date_field :h2s, class: 'form-control', required: true %><br>
 
-        <%= f.label :document, "Picture of H2S Card required", class: "pull-left" %><br>
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :document, "Picture of H2S Card required", class: "pull-left" %><br>
         <%= f.file_field :document, :html =>  { :multipart => true }, enctype: "multipart/form-data", class: 'form-control', required: true %><br>
 
-        <%= f.label :rig, class: "pull-left" %><br>
+          <strong class="redfont pull-left dispin">*</strong><%= f.label :rig, class: "pull-left" %><br>
         <%= f.text_field :rig, class: 'form-control', placeholder: "Patterson 287", required: true %><br>
 
         <div id="checkbox">
-          <%= f.label :Do_you_have_a_WellFence_card?, class: "pull-left" %><br>
-          <%= f.check_box :has_card, class: 'font3rem dispin form-contr', placeholder: "" %><br>
+            <strong class="redfont pull-left dispin">*</strong><%= f.label :Do_you_have_a_physical_WellFence_card_in_hand?, "Do you have a WellFence card in your posession?", class: "pull-left" %><br>
+          <%= f.check_box :has_card, class: 'font3rem dispin form-contr', placeholder: "yes/no" %><br>
         </div>
 
         <div id="cardnum">

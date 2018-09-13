@@ -1,8 +1,8 @@
 require("bundler")
 Bundler.require()
 
-account_sid = "AC56b53d6358ccfd93aa9769cd04ac9f2d"
-auth_token = "29c2ba7b3e7d156ede52b53373dbdecd"
+account_sid = ENV['ACCOUNT_SID']
+auth_token = ENV['AUTH_TOKEN']
 
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 

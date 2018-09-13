@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180912194247) do
+ActiveRecord::Schema.define(version: 20180913140801) do
 
   create_table "people", force: :cascade do |t|
     t.string   "first_name"
@@ -23,12 +23,13 @@ ActiveRecord::Schema.define(version: 20180912194247) do
     t.boolean  "has_card"
     t.string   "card_number"
     t.string   "rig"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "document_id"
     t.string   "document"
     t.boolean  "completed"
     t.boolean  "waiting"
+    t.string   "note",        limit: 250
     t.index ["document_id"], name: "index_people_on_document_id"
   end
 

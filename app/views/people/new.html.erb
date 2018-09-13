@@ -40,12 +40,10 @@
         <strong class="redfont pull-left dispin">*</strong><%= f.label :document, "Picture of H2S Card (.jpg, .jpeg, .png)", class: "pull-left" %><br>
         <%= f.file_field :document, :html =>  { :multipart => true }, enctype: "multipart/form-data", class: 'form-control' %><br>
 
-          <strong class="redfont pull-left dispin">*</strong><%= f.label :rig, class: "pull-left" %><br>
-        <%= f.text_field :rig, class: 'form-control', placeholder: "Patterson 287", required: true %><br>
-
         <div id="checkbox">
-            <strong class="redfont pull-left dispin">*</strong><%= f.label :Do_you_have_a_physical_WellFence_card_in_hand?, "Do you have a WellFence card in your possession?", class: "pull-left" %><br>
-          <%= f.check_box :has_card, class: 'font3rem dispin form-control' %><br>
+          <strong class="redfont pull-left dispin">*</strong><%= f.label :Do_you_have_a_physical_WellFence_card_in_hand?, "Do you have a WellFence card in your possession?", class: "pull-left" %><br>
+          <small class="grayfont"><i>(Check yes or leave blank)</i></small><br>
+          <%= f.check_box :has_card, class: 'dispin' %><br>
         </div>
 
         <div id="cardnum">
@@ -53,14 +51,21 @@
           <%= f.text_field :card_number, class: 'form-control', placeholder: "" %><br>
         </div>
 
-        <div>
-            <strong class="redfont pull-left dispin">*</strong><%= f.label :waiting, "Are you waiting at the gate now?", class: "pull-left" %><br>
-          <%= f.check_box :waiting, class: 'font3rem dispin form-control' %><br>
+        <div id="waiting">
+          <strong class="redfont pull-left dispin">*</strong><%= f.label :Are_you_waiting_at_the_Gate?, "Are you currently waiting at the gate to location?", class: "pull-left" %><br>
+          <small class="grayfont"><i>(Check yes or leave blank)</i></small><br>
+          <%= f.check_box :waiting, class: 'dispin' %><br>
         </div>
-<!--data-toggle="modal" data-target="#yesModal"-->
+
+        <div id="rignum">
+          <strong class="redfont pull-left dispin">*</strong><%= f.label :rig, class: "pull-left" %><br>
+          <%= f.text_field :rig, class: 'form-control', placeholder: "Patterson 287", required: true %><br>
+        </div>
+
         <div id="correct" >
           <%= f.submit "Submit", class: 'picshad btn btn-primary font5rem tmar25' %>
         </div>
+<!--data-toggle="modal" data-target="#yesModal"-->
         <div class="row ofont tpad0 tmar0 tcent maxwid150">
           <div id="yesModal" class="modal fade" role="dialog">
             <div class="modal-dialog tmar10per">

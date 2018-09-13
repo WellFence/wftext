@@ -15,10 +15,20 @@
 //= require jquery_ujs
 //= require_tree .
 
-//registration for hidden card number field unless check box field is true
+//registration for hidden card number field unless possessing card check box field is true
 $(document).ready(function() {
   $('#cardnum').hide(); //Initially form wil be hidden.
   $('#checkbox').click(function() {
-    $('#cardnum').show();//Form shows on button click
+    $('#cardnum').toggle();//Form shows on button click
+  });
+});
+
+
+
+//registration for hidden rig number field unless waiting check box field is true
+$(document).ready(function() {
+  $('#rignum').hide(); //Initially form wil be hidden.
+  $('#waiting').click(function() {
+    $('#rignum').toggle();//Form shows on button click
   });
 });

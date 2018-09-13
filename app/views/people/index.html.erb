@@ -34,6 +34,10 @@
         TEL: <%= person.phone %><br>
         ID: <%= person.card_number %><br>
         H2S: <%= person.h2s %><br>
+        NOTES:
+        <div class="mailchimpformborder lpad5 tpad5 bpad5">
+          <%= person.note %>
+        </div><br>
         <small class="lmar2">Added on: <%= person.created_at %></small><br>
         <small class="lmar2">While at: <%= person.rig %></small><br>
         <%= link_to "", edit_person_path(person), class: "font3rem nodec2 glyphicon glyphicon-edit rpad50 tmar15" %>

@@ -8,16 +8,26 @@
       <div class="col-md-4 bmar25">
       <div class="bpad15 bline wid90per">
         <% if @person.completed != true %>
-          STATUS: <span class="glyphicon glyphicon-warning-sign redfont"> - INCOMPLETE</span><br>
-          ACTION: <%= link_to " - Mark Complete", people_mark_completed_path(@person, id: @person.id), method: :mark_complete, class: "glyphicon glyphicon-ok greenfont" %><br>
+            REG. STATUS: <span class="glyphicon glyphicon-warning-sign redfont"> - INCOMPLETE</span><br>
+            ACTION: <%= link_to " - Mark Complete", people_mark_completed_path(@person, id: @person.id), method: :mark_complete, class: "glyphicon glyphicon-ok greenfont" %><br>
         <% else %>
-         STATUS: <span class="greenfont">Registration Complete</span>
+            REG. STATUS: <span class="greenfont">Registration Complete</span><br>
+        <% end %>
+        <% if @person.waiting != true %>
+            GATE STATUS: <span class="greenfont">Not Waiting</span><br>
+        <% else %>
+            GATE STATUS: <span class="glyphicon glyphicon-warning-sign redfont"> - WAITING AT GATE</span><br>
+            ACTION: <%= link_to "Click to Resolve", people_waiting_path(@person, id: @person.id), method: :waiting, class: "glyphicon glyphicon-ok greenfont" %><br>
         <% end %>
         <%= @person.company %> - <%= @person.position %><br>
         ID: <%= @person.card_number %><br>
         H2S: <%= @person.h2s %><br>
         IMG: <%= image_tag(@person.document.thumb.url, alt: 'Image', class: 'wid150') if @person.document? %><br>
         TEL: <%= @person.phone %><br>
+        NOTES:
+        <div class="mailchimpformborder lpad5 tpad5 bpad5">
+          <%= @person.note %>
+        </div><br>
         <small class="lmar2">Added on: <%= @person.created_at %></small><br>
         <small class="lmar2">While at: <%= @person.rig %></small><br>
         <%= link_to "", edit_person_path(@person, id: @person.id), class: "font3rem nodec2 glyphicon glyphicon-edit rpad50 tmar15" %>

@@ -1,2 +1,80 @@
-<h1>People#edit</h1>
-<p>Find me in app/views/people/edit.html.erb</p>
+<div class="container on-left ewid tmar25">
+  <div class="ifont fullwid bline bpad15 font4rem"><strong class="grayfont">UPDATE:</strong> <%= @person.first_name %> <%= @person.last_name %><br>
+  </div>
+  <%= link_to "", people_path, class: "glyphicon grayfont glyphicon-arrow-left eefont pull-left nodec2 font3rem tmar5" %>
+  <%= link_to "", welcome_index_path, class: "glyphicon grayfont glyphicon-home eefont pull-right nodec2 font3rem tmar5" %><br>
+  <div class="bmar50">
+  </div>
+<div class="tcent tpad25"><strong class="redfont">*</strong> <i class="grayfont">Indicates required field</i></div>
+<div class="tcent posrel">
+  <div class="dispin bmar50 tcent pad25">
+    <%= form_for [@person] do |f| %>
+      <% if @person.errors.any? %>
+        <div class="alert alert-danger">
+          <h4><%= pluralize(@person.errors.count, "error") %></h4>
+          <ul>
+            <% @person.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :first_name, class: "pull-left" %><br>
+        <%= f.text_field :first_name, class: 'form-control', required: true %><br>
+
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :last_name, class: "pull-left" %><br>
+        <%= f.text_field :last_name, class: 'form-control', required: true %><br>
+
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :Company, class: "pull-left" %><br>
+        <%= f.text_field :company, class: 'form-control', required: true %><br>
+
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :position, class: "pull-left" %><br>
+        <%= f.text_field :position, class: 'form-control', required: true %><br>
+
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :email, class: "pull-left" %><br>
+        <%= f.text_field :email, class: 'form-control', placeholder: "" %><br>
+
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :phone_number, class: "pull-left" %><br>
+        <%= f.text_field :phone, class: 'form-control', placeholder: "8001234567", required: true %><br>
+
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :h2s, 'H2S Expiration Date', class: "pull-left" %><br>
+        <%= f.date_field :h2s, class: 'form-control', required: true %><br>
+
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :document, "Picture of H2S Card (.jpg, .jpeg, .png)", class: "pull-left" %><br>
+        <%= f.file_field :document, :html =>  { :multipart => true }, enctype: "multipart/form-data", class: 'form-control' %><br>
+
+        <div id="checkbox">
+            <strong class="redfont pull-left dispin">*</strong><%= f.label :Do_you_have_a_physical_WellFence_card_in_hand?, "Do you have a WellFence card in your possession?", class: "pull-left" %><br>
+          <%= f.check_box :has_card, class: 'font3rem dispin form-control' %><br>
+        </div>
+
+        <div id="cardnum">
+          <%= f.label :WellFence_card_number, class: "pull-left" %><br><br>
+          <%= f.text_field :card_number, class: 'form-control', placeholder: "" %><br>
+        </div>
+
+        <div id="waiting">
+            <strong class="redfont pull-left dispin">*</strong><%= f.label :waiting, "Are you waiting at the gate now?", class: "pull-left" %><br>
+          <%= f.check_box :waiting, class: 'font3rem dispin form-control' %><br>
+        </div>
+
+        <div id="rignum">
+          <strong class="redfont pull-left dispin">*</strong><%= f.label :rig, class: "pull-left" %><br>
+          <%= f.text_field :rig, class: 'form-control', placeholder: "Patterson 287", required: true %><br>
+        </div>
+
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :Notes, class: "pull-left" %><br>
+        <%= f.text_area :note, class: 'form-control', placeholder: "" %><br>
+
+        <div id="correct" >
+          <%= f.submit "Submit", class: 'picshad btn btn-primary font5rem tmar25' %>
+        </div>
+    <% end %>
+  </div>
+</div>
+<div class="tcent fullwid">
+  <%= link_to "", welcome_index_path, class: "glyphicon grayfont glyphicon-home eefont nodec2 font3rem bpad25" %>
+</div>
+<div class="grayfont tcent bmar50 row lmar25 rmar25">
+  <small class="tcent wid75per grayfont wid75per bmar25 lmar25 rmar25"> © 2017-2018 WellFence LLC. All Rights Reserved.Patented & Patent Pending. Wellfence ® is a registered trademark of Wellfence LLC.<br> Support: 832.940.9797</small>
+</div>

@@ -29,6 +29,19 @@ class PeopleController < ApplicationController
     @person = Person.find(params[:id])
   end
 
+  def update
+    @person = Person.find(params[:id])
+    @person.assign_attributes(person_params)
+
+    if @person.save
+      flash[:notice] = "\"#{@person.first_name}\" was successfully updated."
+      redirect_to person_path
+     else
+      flash.now[:alert] = "There was an error with the update. Please try again."
+      render :edit
+     end
+  end
+
   def updated
     @person = Person.find(params[:id])
     @person.assign_attributes(person_params)
@@ -97,7 +110,7 @@ class PeopleController < ApplicationController
   end
 
   def person_params
-    params.require(:person).permit(:first_name, :last_name, :company, :position, :email, :phone, :h2s, :has_card, :card_number, :rig, :id, :document, :completed, :search, :waiting)
+    params.require(:person).permit(:first_name, :last_name, :company, :position, :email, :phone, :h2s, :has_card, :card_number, :rig, :id, :document, :completed, :search, :waiting, :note)
   end
 
 end

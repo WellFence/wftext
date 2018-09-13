@@ -36,10 +36,10 @@ class PeopleController < ApplicationController
     if @person.save
       flash[:notice] = "\"#{@person.first_name}\" was successfully updated."
       redirect_to person_path
-     else
+    else
       flash.now[:alert] = "There was an error with the update. Please try again."
       render :edit
-     end
+    end
   end
 
   def updated
@@ -101,12 +101,12 @@ class PeopleController < ApplicationController
     @client.messages.create(
       from: "+18306421354",
         to: "+18322820867",
-      body: "#{@person.first_name} #{@person.last_name}\n #{@person.company}\n #{@person.position}\n #{@person.email}\n Phone: #{@person.phone}\n ID: #{@person.card_number}\n H2S DATE: #{@person.h2s}\n H2S: #{@person.document}")
+      body: "#{@person.first_name} #{@person.last_name}\n #{@person.company}\n #{@person.position}\n #{@person.email}\n Phone: #{@person.phone}\n ID: #{@person.card_number}\n H2S DATE: #{@person.h2s}\n H2S: #{@person.document}\n Rig: #{@person.rig}")
 
     @client.messages.create(
       from: "+18306421354",
         to: "+12104008165",
-      body: "WAITING: #{@person.waiting}\n #{@person.first_name} #{@person.last_name}\n #{@person.company}\n #{@person.position}\n #{@person.email}\n Phone: #{@person.phone}\n ID: #{@person.card_number}\n H2S DATE: #{@person.h2s}\n H2S: #{@person.document}")
+      body: "WAITING: #{@person.waiting}\n #{@person.first_name} #{@person.last_name}\n #{@person.company}\n #{@person.position}\n #{@person.email}\n Phone: #{@person.phone}\n ID: #{@person.card_number}\n H2S DATE: #{@person.h2s}\n H2S: #{@person.document}\n Rig: #{@person.rig}")
   end
 
   def person_params

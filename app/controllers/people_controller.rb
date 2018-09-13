@@ -93,7 +93,7 @@ class PeopleController < ApplicationController
     @client.messages.create(
       from: "+18306421354",
         to: "+12104008165",
-      body: "WAITING: #{@person.waiting}\n #{@person.first_name} #{@person.last_name}\n #{@person.company}\n #{@person.position}\n #{@person.email}\n Phone: #{@person.phone}\n ID:#{@person.card_number}\n H2S: #{@person.document}\n")
+      body: "WAITING: #{@person.waiting}\n #{@person.first_name} #{@person.last_name}\n #{@person.company}\n #{@person.position}\n #{@person.email}\n Phone: #{@person.phone}\n ID:#{@person.card_number}\n H2S: #{@person.document}\n #{@person.rig}")
   end
 
   def person_params

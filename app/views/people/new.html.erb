@@ -37,7 +37,8 @@
         <strong class="redfont pull-left dispin">*</strong><%= f.label :h2s, 'H2S Expiration Date', class: "pull-left" %><br>
         <%= f.date_field :h2s, class: 'form-control', required: true %><br>
 
-        <strong class="redfont pull-left dispin">*</strong><%= f.label :document, "Picture of H2S Card (.jpg, .jpeg, .png)", class: "pull-left" %><br>
+        <strong class="redfont pull-left dispin">*</strong><%= f.label :document, "Picture of H2S Card (.jpg, .jpeg, .png)", class: "pull-left" %>
+        <span class="redfont bmar15">NO .PDF!</span>
         <%= f.file_field :document, :html =>  { :multipart => true }, enctype: "multipart/form-data", class: 'form-control' %><br>
 
         <div id="checkbox">

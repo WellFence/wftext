@@ -5,7 +5,7 @@ class Person < ApplicationRecord
   scope :waiting, -> { where(waiting: true)}
 
   mount_uploader :document, DocumentUploader
-  serialize :avatars, JSON
+  serialize :document, JSON
 
   def self.search(search)
     if search
